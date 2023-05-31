@@ -50,8 +50,7 @@
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link" href="index.html"><span class="visually-hidden">ГЛАВНАЯ</span></a>
         </li>
-        <li class="breadcrumbs-item">
-        <a class="breadcrumbs-link">Гостиницы</a>
+        <li class="breadcrumbs-item">Гостиницы>
       </li>
     </ul>
   </header>
@@ -104,24 +103,39 @@
               </li>
             </ul>
             </fieldset>
-            <div class="filter-price">
-							<fieldset class="price">
-								<legend>Стоимость, ₽::</legend>
-								<label for="filter-min-price"><span class="visually-hidden">минимальная цена</span></label>
-									<input id="filter-min-price" type="text" placeholder="от" name="min-price" value="0">
-									<label for="filter-max-price"><span class="visually-hidden">максимальная цена</span></label>
-									<input id="filter-max-price" type="text" placeholder="до" name="max-price" value="9000">
-                  </fieldset>
-              </div>
-								<div class="slidecontainer">
-                  <input type="range" min="0" max="9000" value="7000" class="slider" id="myRange">
+            <div class="price">
+              <fieldset class="price-filter">
+                <legend>Стоимость, ₽::</legend>
+                <label for="min-price"><span class="visually-hidden">минимальная цена</span></label>
+                  <input id="min-price" type="text" placeholder="от" name="min-price">
+                  <label for="max-price"><span class="visually-hidden">максимальная цена</span></label>
+                  <input id="max-price" type="text" placeholder="до" name="max-price">
+                  <div class="slider">
+                  <input type="range" min="0" max="9000" class="slider" id="range">
                 </div>
-                <div class="price-range">
-							<button class="yes" type="submit">ПРИМЕНИТЬ</button>
-              <button class="no" type="reset">СБРОСИТЬ</button>
-						</div>
-          </section>
-  </main>
+                <div class=button-search><input class="submit" type="submit" value="ПРИМЕНИТЬ">
+                <input class="reset" type="reset" value="СБРОСИТЬ">
+              </div>
+              </fieldset>
+            </div>
+  </section>
+              	<!-- <fieldset class="filter-price">
+                <form class="price" action="https://echo.htmlacademy.ru" method="post">
+  							<legend>Стоимость, ₽::</legend>
+								<label for="price-min"><span class="visually-hidden">минимальная цена</span></label>
+									<input id="price-min" type="text" placeholder="от" name="price-min">
+									<label for="price-max"><span class="visually-hidden">максимальная цена</span></label>
+									<input id="price-max" type="text" placeholder="до" name="price-max">
+
+                  <div class="slider">
+                  <input type="range" min="0" max="9000" id="range">
+                  </div>
+                  <div class=button-search>
+                  <input class="submit" type="submit" value="ПРИМЕНИТЬ">
+                  <input class="reset" type="reset" value="СБРОСИТЬ">
+                </div>
+                  </fieldset> -->
+        </main>
 <section class="result-search">
   <h2 class="inner-header-title">Найдено гостиниц: 38</h2>
     <!-- 38 - цифра тянется откуда-то -->
@@ -147,9 +161,10 @@
         <span class="card-price-value">От 4000 ₽</span>
       </p>
       <a class="link-card" href="#">ПОДРОБНЕЕ</a>
-      <button class="button-favorite" type="submit">В ИЗБРАННОЕ</button>
+      <button class="button-favorite" type="button">В ИЗБРАННОЕ</button>
       <p class="stars">
         <span class="visually-hidden">Количество звезд гостиницы - 4 звезды</span>
+
         <img src="#" alt="Одна звезда">
         <img src="#" alt="Вторая звезда">
         <img src="#" alt="Третья звезда">
@@ -166,7 +181,7 @@
             <span class="card-price-value">От 5000 ₽</span>
           </p>
           <a class="link-card" href="#">ПОДРОБНЕЕ</a>
-          <button class="button-favorite-current" type="submit">В ИЗБРАННОМ</button>
+          <button class="button-favorite-current" type="button">В ИЗБРАННОМ</button>
           <p class="stars">
             <span class="visually-hidden">Количество звезд гостиницы - 4 звезды</span>
             <img src="#" alt="Одна звезда">
@@ -185,7 +200,7 @@
               <span class="card-price-value">От 2500 ₽</span>
             </p>
             <a class="link-card" href="#">ПОДРОБНЕЕ</a>
-            <button class="button-favorite" type="submit">В ИЗБРАННОЕ</button>
+            <button class="button-favorite" type="button">В ИЗБРАННОЕ</button>
             <p class="stars">
               <span class="visually-hidden">Количество звезд гостиницы - 3 звезды</span>
               <img src="#" alt="Одна звезда">
@@ -203,7 +218,7 @@
                 <span class="card-price-value">От 1500 ₽</span>
               </p>
               <a class="link-card" href="#">ПОДРОБНЕЕ</a>
-              <button class="button-favorite" type="submit">В ИЗБРАННОЕ</button>
+              <button class="button-favorite" type="button">В ИЗБРАННОЕ</button>
               <p class="stars">
                 <span class="visually-hidden">Количество звезд гостиницы - 2 звезды</span>
                 <img src="#" alt="Одна звезда">
@@ -234,53 +249,45 @@
       </li>
       </ul>
     </section>
-<section class="subscribe">
-<h2 class="subscribe">Подпишитесь на рассылку</h2>
-  <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
-      <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-      <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
-      <button class="button subscribe-button" type="submit">Подписаться</button>
-    </form>
+    <section class="subscribe">
+      <h2 class="subscribe">Подпишитесь на рассылку</h2>
+    <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+        <input class="field" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
+        <button class="button subscribe-button" type="submit">Подписаться</button>
+      </form>
 </section>
-<footer class="page-footer">
-<section class="footer-social">
-<h3 class="page-footer-title">
-<span class="visually-hidden">Социальные сети</span>
+<footer>
+<h3 class="title">
+  <span class="visually-hidden">Социальные сети</span>
 </h3>
-    <ul class="footer-social-list">
-      <li class="footer-social-item">
-        <a class="button-social" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden">Вконтакте</span>
-        </a>
-      </li>
-      </ul>
-      <ul class="footer-social-list">
-        <li class="footer-social-item">
-          <a class="button-social" href="https://t.me/htmlacademy">
-            <span class="visually-hidden">Телеграмм</span>
+      <ul class="list-social">
+        <li class="item-social">
+          <a class="button-social" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Вконтакте</span>
           </a>
         </li>
-        </ul>
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a class="button-social" href="https://www.youtube.com/user/">
-              <span class="visually-hidden">Ютуб</span>
+        <li class="item-social">
+          <a class="button-social" href="https://t.me/htmlacademy">
+         <span class="visually-hidden">Телеграмм</span>
             </a>
           </li>
-          </ul>
-</section>
-<section class="footer-contacts">
-<h4 class="page-footer-contacts">
-  <span class="visually-hidden">Телефон</span>
-</h4>
-<a class="footer-contacts-address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-</section>
-<h4 class="page-footer-contacts">
+        <li class="item-social">
+              <a class="button-social" href="https://www.youtube.com/user/">
+                <span class="visually-hidden">Ютуб</span>
+              </a>
+                        </li>
+<li class="phone">
+<span class="visually-hidden">Телефон</span>
+<a class="address-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+</li>
+</ul>
+<p class="about-text">
+<a href="https://htmlacademy.ru/">
 <span class="visually-hidden">Сайт создан htmlacademy</span>
-</h4>
-<a class="footer-logo" href="https://htmlacademy.ru/">
-<img class="img-footer-logo" alt="Логотип htmlacademy." src="#">
+<img class="about-text-logo" alt="Логотип htmlacademy." src="#">
 </a>
+</p>
 </footer>
 </body>
 </html>
