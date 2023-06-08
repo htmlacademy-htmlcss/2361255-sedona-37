@@ -276,7 +276,6 @@ body {
 /* Каталог */
 
 .main-inner {
-  display: block;
   background-image: url("../images/filtr-background.jpg");
   width: 1200px;
   height: 412px;
@@ -284,7 +283,12 @@ body {
   background-color: #756157;
   color: #ffffff;
 }
-
+/* Переделать, цфиры, чтобы не мешался блок */
+.filter,
+.price {
+  display: flex;
+  height: 112px;
+}
 .inner-header-title {
   font-weight: 700;
   font-size: 60px;
@@ -339,6 +343,7 @@ body {
   line-height: 20px;
   color: #ffffff;
   border: 0;
+  background: transparent;
 }
 
 .inner-header-results {
@@ -418,18 +423,27 @@ body {
   border: 0;
 }
 
-/* Доделать */
+/* .visually-hidden {
+  display: none;
+} */
+
 .stars-4 {
-  background-image: url("../images/hotels/star.svg");
+  background-image: url("../images/hotels/stars-4.svg");
   background-repeat: no-repeat;
+  width: 140px;
+  height: 37px;
 }
 
 .stars-3 {
-  background-image: url("../images/hotels/star.svg");
+  background-image: url("../images/hotels/stars-3.svg");
   background-repeat: no-repeat;
+  width: 140px;
+  height: 37px;
 }
 .stars-2 {
-  background-image: url("../images/hotels/star.svg");
+  background-image: url("../images/hotels/stars-2.svg");
+  width: 140px;
+  height: 37px;
   background-repeat: no-repeat;
 }
 

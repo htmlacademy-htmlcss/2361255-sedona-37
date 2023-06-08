@@ -103,13 +103,13 @@
             </fieldset>
             <div class="price">
               <fieldset class="price-filter">
-                <legend class="catalog-filter-title">Стоимость, ₽::</legend>
+                <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                 <label for="min-price"><span class="visually-hidden">минимальная цена</span></label>
-                  <input id="min-price" type="text" placeholder="от" name="min-price">
+                  <input id="min-price" type="text" placeholder="от" name="min-price" value="0">
                   <label for="max-price"><span class="visually-hidden">максимальная цена</span></label>
-                  <input id="max-price" type="text" placeholder="до" name="max-price">
+                  <input id="max-price" type="text" placeholder="до" name="max-price" value="9000">
                   <div class="slider-range">
-                  <input type="range" min="0" max="9000" class="slider" id="range">
+                  <input class="slider" type="range" id="range" min="0" max="9000">
                 </div>
                 <div class=button-search><input class="submit" type="submit" value="ПРИМЕНИТЬ">
                 <input class="reset" type="reset" value="СБРОСИТЬ">
@@ -171,9 +171,8 @@
       <p class="card-price">от 4000 ₽</p>
       <a class="link-card" href="#">ПОДРОБНЕЕ</a>
       <button class="select" type="button">В ИЗБРАННОЕ</button>
-        <p class="stars-4">
-        <span class="stars"></span>
-        <span class="visually-hidden">Количество звезд гостиницы - 4 звезды из 5</span></p>
+        <p class="stars-4"></p>
+        <span class="visually-hidden">Количество звезд гостиницы - 4 звезды из 5</span>
         <p class="rate">Рейтинг: 8,5</p>
       </li>
       <li>
@@ -186,9 +185,8 @@
         <p class="card-price">От 5000 ₽</p>
         <a class="link-card" href="#">ПОДРОБНЕЕ</a>
           <button class="selected" type="button">В ИЗБРАННОМ</button>
-          <p class="stars-4">
-            <span class="stars-4"></span>
-            <span class="visually-hidden">Количество звезд гостиницы - 4 звезды из 5</span></p>
+          <p class="stars-4"></p>
+            <span class="visually-hidden">Количество звезд гостиницы - 4 звезды из 5</span>
             <p class="rate">Рейтинг: 9,2</p>
           </li>
           <li class="card">
@@ -201,8 +199,8 @@
               <p class="card-price">От 2500 ₽</p>
               <a class="link-card" href="#">ПОДРОБНЕЕ</a>
               <button class="select" type="button">В ИЗБРАННОЕ</button>
-              <p class="stars-3">
-                <span class="visually-hidden">Количество звезд гостиницы - 3 звезды из 5</span></p>
+                <p class="stars-3"></p>
+                <span class="visually-hidden">Количество звезд гостиницы - 3 звезды из 5</span>
                 <p class="rate">Рейтинг: 6,9</p>
               </li>
               <li class="card">
@@ -215,8 +213,8 @@
                   <p class="card-price">От 1500 ₽</p>
                   <a class="link-card" href="#">ПОДРОБНЕЕ</a>
                   <button class="select" type="button">В ИЗБРАННОЕ</button>
-                  <p class="stars-2">
-                    <span class="visually-hidden">Количество звезд гостиницы - 2 звезды из 5</span></p>
+                    <p class="stars-2"></p>
+                    <span class="visually-hidden">Количество звезд гостиницы - 2 звезды из 5</span>
                     <p class="rate">Рейтинг: 5,0</p>
                   </li>
     </ul>
