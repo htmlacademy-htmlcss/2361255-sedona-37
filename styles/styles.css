@@ -353,20 +353,17 @@ nav-list {
 }
 /* Каталог */
 
-.main-inner {
+.filter-form {
   background-image: url("../images/filtr-background.jpg");
   width: 1200px;
-  height: 412px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #756157;
   color: #ffffff;
+  margin: 0 auto;
+  padding: 0;
 }
-/* Переделать, цфиры, чтобы не мешался блок */
-.filter,
-.price {
-  display: flex;
-  height: 112px;
-}
+
 .inner-header-title {
   font-weight: 700;
   font-size: 60px;
@@ -391,6 +388,20 @@ nav-list {
   font-size: 16px;
 }
 
+.filter {
+  display: flex;
+  width: 1060px;
+  margin: 0;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.catalog-filter-hotels {
+  width: 150px;
+  margin-right: 70px;
+}
+
 .catalog-filter-title {
   font-weight: 700;
   font-size: 20px;
@@ -401,6 +412,17 @@ nav-list {
 .catalog-filter-item {
   line-height: 23px;
 }
+
+.catalog-filter-type-house {
+  width: 151px;
+  margin-right: 141px;
+}
+
+.about-text {
+  max-width: 549px;
+  margin-left: auto;
+}
+
 .min-price,
 .max-price {
   line-height: 24px;
@@ -424,21 +446,34 @@ nav-list {
   background: transparent;
 }
 
-.button-show-card {
+.result-search title {
+  width: 338px;
+  margin-right: 200px;
+}
+
+/* .select-control {
+  width: 292 px;
+} */
+
+.show {
+  max-width: 160px;
+  margin-left: auto;
+}
+.button-show card {
   background-image: url("../images/filter/cards.svg");
   width: 16px;
   height: 14px;
   background-repeat: no-repeat;
 }
 
-.button-show-slide {
+.button-show slide {
   background-image: url("../images/filter/slide.svg");
   width: 16px;
   height: 14px;
   background-repeat: no-repeat;
 }
 
-.button-show-list {
+.button-show list {
   background-image: url("../images/filter/list.svg");
   width: 16px;
   height: 14px;
@@ -449,6 +484,10 @@ nav-list {
 
 .result-search {
   background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .cards {
