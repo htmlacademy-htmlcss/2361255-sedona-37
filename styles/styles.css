@@ -71,37 +71,6 @@ body {
 p {
   margin: 0;
 }
-/* Кнопки */
-
-.select {
-  font-weight: 700;
-  font-family: "PT Sans", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  color: #ffffff;
-  background: #82b3d3;
-  border: 0;
-}
-
-.selected {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  font-family: "PT Sans", sans-serif;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #7db54f;
-  border: 0;
-}
-
-.subscribe-form .button {
-  background: #82b3d3;
-  font-size: 20px;
-  line-height: 36px;
-  margin: 0;
-}
-
 /* Кнопки-ссылки */
 
 .button {
@@ -132,6 +101,35 @@ p {
   line-height: 36px;
   margin: 0 auto;
   max-width: 590px;
+}
+
+.link-card {
+  padding: 8px; 26px;
+}
+
+/* Кнопки */
+.select {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background: #82b3d3;
+  padding: 8px 20px;
+}
+
+.selected {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  background: #82b3d3;
+  padding: 8px 20px;
+  background-color: #7db54f;
+}
+
+.subscribe-form .button {
+  background: #82b3d3;
+  font-size: 20px;
+  line-height: 36px;
+  margin: 0;
 }
 
 /* Шапка */
@@ -402,20 +400,31 @@ p {
 /* Подписка ПЕРЕДЕЛАТЬ*/
 .subscribe {
   display: block;
+  text-align: center;
+  margin: 0;
+  padding: 96px 258px 104px;
+}
+
+/* Подписка главная */
+.subscribe.main {
   background-image: url("../images/subscribe.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #c7b39b;
   color: #ffffff;
-  padding: 96px 258px 104px;
 }
-
-.subscribe .title {
+.subscribe-form {
+  display: flex;
+  width: 684px;
+  margin: auto;
+}
+.title.invert {
   color: #ffffff;
   margin-bottom: 20px;
 }
 
 .field {
+  display: block;
   box-sizing: border-box;
   line-height: 24px;
   min-height: 52px;
@@ -423,6 +432,7 @@ p {
   font-family: "PT Sans", sans-serif;
   border: 0;
   padding: 14px 20px;
+  background-color: #f2f2f2;
 }
 
 .subscribe .description {
@@ -570,74 +580,103 @@ p {
   line-height: 20px;
   color: #ffffff;
   border: 0;
-  background: transparent;
-}
+  background: transparent;}
+
+
+  .result-search {
+    display: flex;
+    width: 1060px;
+    min-height: 49px;
+    margin: 0 auto;
+  }
 
 .result-search title {
   width: 338px;
-  margin-right: 200px;
 }
 
-/* .select-control {
-  width: 292 px;
-} */
+.select-control {
+  width: 300px;
+
+}
 
 .show {
-  max-width: 160px;
-  margin-left: auto;
-}
-.button-show card {
-  background-image: url("../images/filter/cards.svg");
-  width: 16px;
-  height: 14px;
-  background-repeat: no-repeat;
-}
+  display: flex;
+  height: 49px;
 
-.button-show slide {
-  background-image: url("../images/filter/slide.svg");
-  width: 16px;
-  height: 14px;
-  background-repeat: no-repeat;
-}
+  }
 
-.button-show list {
-  background-image: url("../images/filter/list.svg");
-  width: 16px;
-  height: 14px;
-  background-repeat: no-repeat;
-}
 
 /* Гостиницы */
 
-.result-search {
-  display: flex;
-  justify-content: space-between;
-  width: 1060px;
-  margin: 0 auto;
-}
 
+.hotels {
+  display: flex;
+  margin: 0;
+  padding-left: 70px;
+  padding-right: 70px;
+  width: 1060px;
+  margin-bottom: 40px;
+}
 .cards {
   color: #333333;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
-.card-title {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: #000000;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 20px;
+  min-width: 340px;
+  min-height: 438px;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
-.link-card {
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-  background-color: #756157;
+.card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.card-image {
+  display: block;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.card .title-item {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.hotels-description {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  text-transform: uppercase;
+  margin-bottom: 16px;
+
 }
+
+.wrapper-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-description {
+  margin: 0;
+}
+
+.wrapper-rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  }
 
 .stars-4 {
   background-image: url("../images/hotels/stars-4.svg");
@@ -652,6 +691,7 @@ p {
   width: 140px;
   height: 37px;
 }
+
 .stars-2 {
   background-image: url("../images/hotels/stars-2.svg");
   width: 140px;
@@ -660,12 +700,26 @@ p {
 }
 
 .rate {
+  display: block;
+  box-sizing: border-box;
+  padding: 8px 22px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+  background-color: #F2F2F2;
 }
 
 /* Пагинация */
+
+.pagination {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 1060px;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 60px;
+}
 .pagination-item {
   font-weight: 700;
   font-size: 20px;
@@ -673,11 +727,23 @@ p {
 }
 
 .pagination-link {
-  background: #82b3d3;
+  display: block;
+  box-sizing: border-box;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  min-width: 60px;
+  height: 60px;
   color: #ffffff;
+  background: #82b3d3;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
+  padding: 12px 18px;
 }
+
+.pagination-item:not(:last-child) {
+  margin-right: 8px;
 
 .pagination-current {
   background: #f2f2f2;
@@ -686,11 +752,8 @@ p {
   color: #000000;
 }
 
-.pagination-link-points {
+.pagination-link.points {
   text-decoration: none;
   color: #000000;
-}
-
-/* Подписка каталог */
-.subscribe-catalog {
+  background: inherit;
 }
