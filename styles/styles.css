@@ -117,6 +117,7 @@ body {
   line-height: 20px;
   background: #82b3d3;
   padding: 8px 20px;
+  border: 0;
 }
 
 .selected {
@@ -133,6 +134,28 @@ body {
   font-size: 20px;
   line-height: 36px;
   margin: 0;
+}
+
+.submit {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  background: #82b3d3;
+  padding: 8px 50px;
+  border: 0;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 32px;
+}
+
+.reset {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  border: 0;
+  background: transparent;
+  padding: 8px 50px;
 }
 
 /* Шапка */
@@ -502,37 +525,60 @@ body {
   color: #ffffff;
   margin: 0 auto;
   padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  padding: 35px 70px 70px 70px;
 }
 
 .inner-header-title {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+  margin-bottom: 8px;
 }
 
-.breadcrumbs-link {
-  background-image: url("../images/service-icons/home.svg");
-  width: 12px;
-  height: 12px;
-  background-repeat: no-repeat;
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-item {
+  display: flex;
   font-size: 16px;
+  align-items: baseline;
 }
 
-.filter {
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.breadcrumbs-link {
+  display: flex;
+  box-sizing: border-box;
+  width: 13px;
+  height: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog-filters {
   display: flex;
   width: 1060px;
   margin: 0;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  align-items: flex-start;
 }
 
-.catalog-filter-hotels {
-  width: 150px;
+.catalog-filter {
+  min-width: 151px;
+  margin: 0;
+  padding: 0;
   margin-right: 70px;
+  min-height: 157px;
+  border: none;
 }
 
 .catalog-filter-title {
@@ -540,45 +586,63 @@ body {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+  margin-bottom: 32px;
 }
 
-.catalog-filter-item {
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
   line-height: 23px;
 }
 
-.catalog-filter-type-house {
-  width: 151px;
-  margin-right: 141px;
+.house-filter {
+  margin-right: 140px;
 }
 
-.about-text {
-  max-width: 549px;
-  margin-left: auto;
+.filter-item {
+  line-height: 23px;
 }
 
-.min-price,
-.max-price {
+.filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.price-filter {
+  margin: 0;
+  margin-right: 70px;
+}
+
+.wprapper-price {
+  display: flex;
+  margin-bottom: 36px;
+}
+
+.wprapper-price .control-input {
+  text-align: start;
+  box-sizing: border-box;
+  font-weight: 700;
   line-height: 24px;
-}
-
-.submit {
-  background-color: #82b3d3;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
+  padding: 12px 20px;
+  width: 143px;
+  color: #000000;
   border: 0;
+  height: 48px;
+}
+.min-price {
+  margin-right: 2px;
 }
 
-.reset {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+/* .slider {
+  background: #ffffff;
+  border-radius: 5px;
   color: #ffffff;
-  border: 0;
-  background: transparent;
-}
+} */
 
+.button-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 /* Сортировка */
 .wrapper-search {
   display: flex;

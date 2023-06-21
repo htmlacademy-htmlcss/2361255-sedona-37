@@ -64,25 +64,25 @@
       </li>
     </ul>
   </header>
-    <section class="filter">
+    <div class="filter">
     <h2 class="visually-hidden" hidden>Список гостиниц с фильтрами</h2>
-    <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-    <fieldset class="catalog-filter-hotels">
+    <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
+    <fieldset class="catalog-filter hotels-filter">
       <legend class="catalog-filter-title">Инфраструктура</legend>
       <ul class="catalog-filter-list">
-        <li class="catalog-filter-item">
+        <li class="filter-item">
           <label class="control">
             <input class="control-input" type="checkbox" name="pool" checked>
         Бассейн
           </label>
         </li>
-        <li class="catalog-filter-item">
+        <li class="filter-item">
           <label class="control">
             <input class="control-input" type="checkbox" name="parking" checked>
         Парковка
           </label>
         </li>
-        <li class="catalog-filter-item">
+        <li class="filter-item">
           <label class="control">
             <input class="control-input" type="checkbox" name="wifi">
             Wi-Fi
@@ -90,22 +90,22 @@
         </li>
       </ul>
     </fieldset>
-    <fieldset class="catalog-filter-type-house">
+    <fieldset class="catalog-filter house-filter">
       <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
-              <li class="catalog-filter-item">
+              <li class="filter-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="type-house" value="Hotel" checked>
                   Гостиница
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="filter-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="type-house" value="Motel">
                   Мотель
                 </label>
               </li>
-              <li class="catalog-filter-item">
+              <li class="filter-item">
                 <label class="control">
                   <input class="control-input" type="radio" name="type-house" value="Appart">
                   Апартаменты
@@ -113,24 +113,24 @@
               </li>
             </ul>
             </fieldset>
-            <div class="price">
-              <fieldset class="price-filter">
+
+              <fieldset class="catalog-filter price-filter">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+                <div class="wprapper-price">
                 <label for="min-price"><span class="visually-hidden" hidden>минимальная цена</span></label>
-                  <input id="min-price" type="text" placeholder="от" name="min-price" value="0">
+                <input class="control-input min-price" type="text" placeholder="от" name="min-price" value="0">
                   <label for="max-price"><span class="visually-hidden" hidden>максимальная цена</span></label>
-                  <input id="max-price" type="text" placeholder="до" name="max-price" value="9000">
-                  <div class="slider-range">
-                  <input class="slider" type="range" id="range" min="0" max="9000">
+                <input class="control-input max-price" type="text" placeholder="до" name="max-price" value="9000">
                 </div>
-                <div class=button-search><input class="submit" type="submit" value="ПРИМЕНИТЬ">
+                <input class="slider" type="range" id="range-price" name="price" min="0" max="9000">
+                </fieldset>
+                <div class="button-search">
+                  <input class="submit" type="submit" value="ПРИМЕНИТЬ">
                 <input class="reset" type="reset" value="СБРОСИТЬ">
               </div>
-              </fieldset>
               </div>
             </form>
-            </section>
-            </section>
+          </section>
 <div class="wrapper-search">
         <section class="result-search">
   <h2 class="title">Найдено гостиниц: 38</h2>
@@ -288,7 +288,6 @@
           <button class="button select" type="submit">Подписаться</button>
         </form>
 </section>
-
 </main>
 <footer>
   <div class="footer-container">
@@ -348,6 +347,7 @@
     </p>
     </div>
     </footer>
+  </div>
   </div>
     </body>
     </html>
