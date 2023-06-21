@@ -48,7 +48,7 @@
           </nav>
   </header>
   <main class="main-container">
-    <div class="filter-form">
+    <section class="filter-form">
   <header class="inner-header">
     <h1 class="inner-header-title">Гостиницы Седоны</h1>
     <ul class="breadcrumbs">
@@ -66,7 +66,7 @@
   </header>
     <section class="filter">
     <h2 class="visually-hidden" hidden>Список гостиниц с фильтрами</h2>
-    <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get"></form>
+    <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
     <fieldset class="catalog-filter-hotels">
       <legend class="catalog-filter-title">Инфраструктура</legend>
       <ul class="catalog-filter-list">
@@ -128,9 +128,10 @@
               </div>
               </fieldset>
               </div>
-              </section>
-            </div>
-
+            </form>
+            </section>
+            </section>
+<div class="wrapper-search">
         <section class="result-search">
   <h2 class="title">Найдено гостиниц: 38</h2>
     <select class="select-control" aria-label="Сортировка">
@@ -138,9 +139,9 @@
       <option value="popular">Сначала популярные</option>
       <option value="expensive">Сначала дорогие</option>
     </select>
-    <ul class="show">
+      <ul class="show">
       <li class="button-show">
-    <a class="card" href="#" >
+    <a class="kard" href="#" >
       <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4 0H0V6H4V0Z" fill="black"/>
         <path d="M16 0H12V6H16V0Z" fill="black"/>
@@ -178,7 +179,7 @@
   </li>
     </ul>
     </section>
-    <section class="hotels">
+    <div class="hotels">
   <ul class="cards">
     <li class="card">
     <a class="card-image" href="#">
@@ -257,7 +258,7 @@
                     </div>
                   </li>
     </ul>
-    </section>
+  </div>
     <ul class="pagination">
     <li class="pagination-item">
         <a class="pagination-link pagination-current">1</a>
@@ -278,6 +279,7 @@
         <a class="pagination-link" href="#">10</a>
       </li>
       </ul>
+    </div>
     <section class="subscribe">
       <h2 class="title">Подпишитесь на рассылку</h2>
       <p class="description">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -286,6 +288,7 @@
           <button class="button select" type="submit">Подписаться</button>
         </form>
 </section>
+
 </main>
 <footer>
   <div class="footer-container">
