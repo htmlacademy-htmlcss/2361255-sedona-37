@@ -67,8 +67,11 @@ body {
   list-style: none;
 }
 
-/* Переделать */
-p {
+.text {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
   margin: 0;
 }
 /* Кнопки-ссылки */
@@ -104,7 +107,7 @@ p {
 }
 
 .link-card {
-  padding: 8px; 26px;
+  padding: 8px 26px;
 }
 
 /* Кнопки */
@@ -114,6 +117,7 @@ p {
   line-height: 20px;
   background: #82b3d3;
   padding: 8px 20px;
+  border: 0;
 }
 
 .selected {
@@ -130,6 +134,28 @@ p {
   font-size: 20px;
   line-height: 36px;
   margin: 0;
+}
+
+.submit {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  background: #82b3d3;
+  padding: 8px 50px;
+  border: 0;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 32px;
+}
+
+.reset {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  border: 0;
+  background: transparent;
+  padding: 8px 50px;
 }
 
 /* Шапка */
@@ -489,7 +515,7 @@ p {
   justify-content: center;
 }
 
-/* Каталог */
+/* Фильтр */
 
 .filter-form {
   background-image: url("../images/filtr-background.jpg");
@@ -499,44 +525,60 @@ p {
   color: #ffffff;
   margin: 0 auto;
   padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  padding: 35px 70px 70px 70px;
 }
 
 .inner-header-title {
   font-weight: 700;
   font-size: 60px;
   line-height: 78px;
+  margin: 0;
+  margin-bottom: 8px;
 }
 
-.breadcrumbs-link {
-  background-image: url("../images/service-icons/home.svg");
-  width: 12px;
-  height: 12px;
-  background-repeat: no-repeat;
-}
-
-.further {
-  background-image: url("../images/service-icons/Further.svg");
-  width: 6px;
-  height: 10px;
-  background-repeat: no-repeat;
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
 }
 
 .breadcrumbs-item {
+  display: flex;
   font-size: 16px;
+  align-items: baseline;
 }
 
-.filter {
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.breadcrumbs-link {
+  display: flex;
+  box-sizing: border-box;
+  width: 13px;
+  height: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog-filters {
   display: flex;
   width: 1060px;
   margin: 0;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  align-items: flex-start;
 }
 
-.catalog-filter-hotels {
-  width: 150px;
+.catalog-filter {
+  min-width: 151px;
+  margin: 0;
+  padding: 0;
   margin-right: 70px;
+  min-height: 157px;
+  border: none;
 }
 
 .catalog-filter-title {
@@ -544,79 +586,124 @@ p {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+  margin-bottom: 32px;
 }
 
-.catalog-filter-item {
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
   line-height: 23px;
 }
 
-.catalog-filter-type-house {
-  width: 151px;
-  margin-right: 141px;
+.house-filter {
+  margin-right: 140px;
 }
 
-.about-text {
-  max-width: 549px;
-  margin-left: auto;
+.filter-item {
+  line-height: 23px;
 }
 
-.min-price,
-.max-price {
+.filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.price-filter {
+  margin: 0;
+  margin-right: 70px;
+}
+
+.wprapper-price {
+  display: flex;
+  margin-bottom: 36px;
+}
+
+.wprapper-price .control-input {
+  text-align: start;
+  box-sizing: border-box;
+  font-weight: 700;
   line-height: 24px;
+  padding: 12px 20px;
+  width: 143px;
+  color: #000000;
+  border: 0;
+  height: 48px;
+}
+.min-price {
+  margin-right: 2px;
 }
 
-.submit {
-  background-color: #82b3d3;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+/* .slider {
+  background: #ffffff;
+  border-radius: 5px;
   color: #ffffff;
-  border: 0;
+} */
+
+.button-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+/* Сортировка */
+.wrapper-search {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 50px 70px 40px;
 }
 
-.reset {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: #ffffff;
-  border: 0;
-  background: transparent;}
+.result-search {
+  display: flex;
+}
 
-
-  .result-search {
-    display: flex;
-    width: 1060px;
-    min-height: 49px;
-    margin: 0 auto;
-  }
-
-.result-search title {
-  width: 338px;
+.result-search .title {
+  margin: 0;
+  margin-right: 200px;
+  text-transform: uppercase;
 }
 
 .select-control {
-  width: 300px;
-
+  width: 292px;
+  margin-right: 70px;
+  min-height: 49px;
+  padding: 10px 14px;
+  box-sizing: border-box;
 }
 
 .show {
   display: flex;
-  height: 49px;
+  list-style-type: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  max-width: 160px;
+  align-items: center;
+}
 
-  }
+.button-show {
+  display: flex;
+  width: 48px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 17px;
+}
 
+.button-show:not(:last-child) {
+  margin-right: 8px;
+}
 
 /* Гостиницы */
-
 
 .hotels {
   display: flex;
   margin: 0;
-  padding-left: 70px;
-  padding-right: 70px;
-  width: 1060px;
   margin-bottom: 40px;
 }
+
 .cards {
   color: #333333;
   display: flex;
@@ -657,7 +744,6 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-
 }
 
 .wrapper-button {
@@ -676,7 +762,7 @@ p {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0;
-  }
+}
 
 .stars-4 {
   background-image: url("../images/hotels/stars-4.svg");
@@ -706,20 +792,19 @@ p {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 /* Пагинация */
 
 .pagination {
   display: flex;
+  max-width: 1060px;
   margin: 0;
   padding: 0;
-  width: 1060px;
-  padding-left: 70px;
-  padding-right: 70px;
-  margin-bottom: 60px;
+  flex-wrap: wrap;
 }
+
 .pagination-item {
   font-weight: 700;
   font-size: 20px;
@@ -744,6 +829,7 @@ p {
 
 .pagination-item:not(:last-child) {
   margin-right: 8px;
+}
 
 .pagination-current {
   background: #f2f2f2;
@@ -755,5 +841,5 @@ p {
 .pagination-link.points {
   text-decoration: none;
   color: #000000;
-  background: inherit;
+  background-color: #ffffff;
 }
