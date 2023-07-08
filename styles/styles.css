@@ -125,7 +125,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   background: #82b3d3;
-  padding: 8px 20px;
+  padding: 8px 18px;
   background-color: #7db54f;
 }
 
@@ -472,28 +472,28 @@ body {
   margin: 0 auto;
   padding: 40px 70px 30px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .phone {
-  display: block;
+  display: flex;
   margin: 0 auto;
   text-align: center;
-  max-width: 720px;
 }
 
-/* Проверить высоту */
 .address-phone {
   font-size: 40px;
   line-height: 40px;
-  max-width: 500px;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+  min-width: 331px;
 }
 
 .about-text {
   margin-left: auto;
   min-width: 115px;
+  align-items: center;
 }
 
 /* Соц.сети */
@@ -698,70 +698,35 @@ body {
 
 /* Гостиницы */
 
-.hotels {
-  display: flex;
-  margin: 0;
-  margin-bottom: 40px;
-}
-
 .cards {
-  color: #333333;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 340px);
   margin: 0;
   padding: 0;
+  margin-bottom: 80px;
+  border-bottom: 1px solid #e6e6e6;
+  box-sizing: border-box;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-right: 20px;
-  min-width: 340px;
-  min-height: 438px;
-  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
+  grid-template-rows: 212px 1fr;
   padding: 20px;
-}
-
-.card:nth-child(3n) {
-  margin-right: 0;
 }
 
 .card-image {
   display: block;
-  margin: 0;
-  margin-bottom: 16px;
+  object-fit: contain;
+  grid-column: 1/-1;
 }
 
 .card .title-item {
-  margin-bottom: 16px;
-  text-align: left;
-}
-
-.hotels-description {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.wrapper-button {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 16px;
-}
-
-.card-description {
+  grid-column: 1/-1;
   margin: 0;
-}
-
-.wrapper-rate {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0;
+  text-align: start;
 }
 
 .stars-4 {
@@ -795,6 +760,9 @@ body {
   background-color: #f2f2f2;
 }
 
+.card-price {
+  justify-self: end;
+}
 /* Пагинация */
 
 .pagination {
