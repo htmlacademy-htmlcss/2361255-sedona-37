@@ -95,6 +95,11 @@ body {
   border-radius: 4px;
 }
 
+.button:hover,
+.button:focus-visible {
+  background-color: rgba(97, 80, 72, 1);
+}
+
 .nav-link .button {
   padding: 8px 34px;
   min-width: 160px;
@@ -122,8 +127,20 @@ body {
   border-radius: 4px;
 }
 
-.select .button {
+.select.button:hover,
+.select.button:focus-visible {
+  outline: none;
+  background-color: #68a2ca;
 }
+.select.button:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+.select.button:disabled {
+  background-color: #e5e5e5;
+  pointer-events: none;
+}
+
 .selected {
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
@@ -144,19 +161,6 @@ body {
   min-width: 232px;
   padding: 8px 50px;
 }
-
-/* .submit {
-  font-family: "PT Sans", sans-serif;
-  font-weight: 700;
-  background: #82b3d3;
-  padding: 8px 50px;
-  border: 0;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 20px;
-  margin-bottom: 32px;
-  border-radius: 0 4px 4px 0;
-} */
 
 .reset {
   font-weight: 700;
@@ -275,6 +279,7 @@ body {
 header {
   z-index: 1;
 }
+
 /* Hero */
 .hero {
   display: flex;
@@ -529,11 +534,28 @@ header {
   padding: 11px 0 11px 17px;
   background-color: #f2f2f2;
   border-radius: 4px 0 0 4px;
+  color: rgba(0, 0, 0, 0.6);
   border: 3px solid transparent;
 }
 
 .subscribe .description {
   margin-bottom: 55px;
+}
+
+.field-mail:hover {
+  border: 3px solid #83b3d3;
+}
+.field-mail:active,
+.field-mail:focus-visible {
+  border: none;
+  outline: 2px solid #83b3d3;
+  outline-offset: -2px;
+  border-radius: 4px 0 0 4px;
+}
+.field-mail:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
 
 /* Подвал */
@@ -560,6 +582,14 @@ header {
   box-sizing: border-box;
 }
 
+.address-phone:hover,
+.address-phone:focus-visible {
+  color: #756157;
+}
+.address-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .about-text {
   display: flex;
   box-sizing: border-box;
@@ -569,6 +599,14 @@ header {
   min-width: 115px;
   align-items: center;
   padding: 8px auto;
+}
+
+.about-text:hover path,
+.about-text:focus-visible path {
+  fill: #756157;
+}
+.about-text:active path {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* Соц.сети */
@@ -589,6 +627,15 @@ header {
   height: 40px;
   align-items: center;
   justify-content: center;
+}
+
+.social-button:hover path,
+.social-button:focus-visible path {
+  fill: #68a2ca;
+}
+
+.social-button:active path {
+  opacity: 0.3;
 }
 
 /* Фильтр */
