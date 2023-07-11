@@ -496,7 +496,7 @@ header {
   margin-bottom: 20px;
 }
 
-/* Подписка ПЕРЕДЕЛАТЬ*/
+/* Подписка*/
 .subscribe {
   display: block;
   text-align: center;
@@ -752,12 +752,6 @@ header {
 .min-price {
   margin-right: 2px;
 }
-
-/* .slider {
-  background: #ffffff;
-  border-radius: 5px;
-  color: #ffffff;
-} */
 
 .button-search {
   display: flex;
