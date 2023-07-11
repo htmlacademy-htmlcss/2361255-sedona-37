@@ -105,7 +105,6 @@ body {
   min-width: 160px;
 }
 
-
 .search-hotels .button {
   font-size: 20px;
   line-height: 36px;
@@ -185,7 +184,6 @@ body {
   padding-left: 70px;
   padding-right: 70px;
   width: 1060px;
-  /* height: 64px; */
 }
 
 .navigation-logo {
@@ -516,7 +514,6 @@ header {
 }
 .subscribe-form {
   display: flex;
-  /* width: 684px; */
   margin: auto;
 }
 .title.invert {
