@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="page-container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html" aria-current="page">
             <img class="page-header-logo" src="images/log.svg" width="140" height="70" alt="Логотип сайта «Седона».">
@@ -40,8 +40,8 @@
           </ul>
           </nav>
   </header>
-<main class="main-container">
-  <section class="hero">
+<main class="main-container" data-test="main">
+  <section class="hero" data-test="hero">
     <h1>
       <span class="visually-hidden">
         Добро пожаловать в Седону!
@@ -49,7 +49,7 @@
     </h1>
     <img class="hero-image-description" src="images/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону! Потому что Гранд-Каньон - отстой!">
     </section>
-  <section class="advantages">
+  <section class="advantages" data-test="advantages">
     <div class="intro"><h2 class="title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
     <p class="description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
     </div>
@@ -88,7 +88,7 @@
     <div class="image-bridge"></div>
       </li>
       </ul>
-      <ul class="advantages-service">
+      <ul class="advantages-service" data-test="service">
 <li class="intro-service">
   <h2 class="title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
   <p class="description">Опытный персонал и качественное обслуживание!</p>
@@ -116,12 +116,12 @@
       </li>
   </ul>
   </section>
-  <section class="search-hotels">
+  <section class="search-hotels" data-test="search">
     <h2 class="title">Заинтересовались?</h2>
     <p class="description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
     <a class="button" href="catalog.html">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
     </section>
-    <section class="subscribe main">
+    <section class="subscribe main" data-test="subscribe">
       <h2 class="title invert">Подпишитесь на рассылку</h2>
     <p class="description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -131,8 +131,7 @@
   </section>
 </main>
 <footer>
-  <div class="footer-container">
-
+  <div class="footer-container" data-test="footer">
   <h3>
       <span class="visually-hidden">Социальные сети</span>
     </h3>
