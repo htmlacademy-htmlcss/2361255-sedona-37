@@ -720,11 +720,10 @@ input {
 .breadcrumbs-item {
   display: flex;
   font-size: 16px;
-  align-items: baseline;
 }
 
 .breadcrumbs-item:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .breadcrumbs-link {
@@ -734,6 +733,27 @@ input {
   height: 15px;
   align-items: center;
   justify-content: center;
+  padding-bottom: 2px;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-item::after {
+  content: "";
+  width: 13px;
+  height: 15px;
+  background-image: url(../images/service-icons/further.svg);
+  background-repeat: no-repeat;
+  background-position: center left 12px;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
 }
 
 .catalog-filters {
