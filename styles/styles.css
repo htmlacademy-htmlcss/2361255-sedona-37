@@ -759,6 +759,7 @@ input {
   content: none;
 }
 
+/* Фильтр */
 .catalog-filters {
   display: flex;
   width: 1060px;
