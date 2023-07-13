@@ -192,6 +192,7 @@ body {
   color: #ffffff;
   background: transparent;
   border-radius: 4px;
+  font-family: "PT Sans", sans-serif;
 }
 
 .cancel.button:focus-visible {
@@ -214,6 +215,11 @@ body {
   background: transparent;
 }
 
+.button-search .select {
+  padding: 8px 50px;
+}
+
+.
 /* Шапка */
 .page-header {
   display: flex;
@@ -730,11 +736,20 @@ input {
   justify-content: center;
 }
 
-.catalog-filter {
+.catalog-filters {
   display: flex;
   width: 1060px;
   margin: 0;
   align-items: center;
+}
+
+.catalog-filter {
+  margin: 0;
+  padding: 0;
+  min-width: 150px;
+  min-height: 157px;
+  border: none;
+  margin-right: 70px;
 }
 
 .catalog-filter-title {
@@ -742,6 +757,8 @@ input {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
+  margin: 0;
+  padding: 0;
   margin-bottom: 32px;
 }
 
@@ -766,11 +783,13 @@ input {
 .price-filter {
   margin: 0;
   margin-right: 70px;
+  width: 288px;
 }
 
 .wprapper-price {
   display: flex;
   margin-bottom: 36px;
+  justify-content: flex-end;
 }
 
 .wprapper-price .control-input {
@@ -792,6 +811,10 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding: 0;
+  height: 160px;
+  gap: 34px;
+  box-sizing: border-box;
 }
 
 /* Сортировка */
