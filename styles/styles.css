@@ -792,6 +792,10 @@ input {
   line-height: 23px;
 }
 
+.control-label {
+  padding-left: 36px;
+}
+
 .house-filter {
   margin-right: 140px;
 }
@@ -802,6 +806,72 @@ input {
 
 .filter-item:not(:last-child) {
   margin-bottom: 16px;
+}
+
+.control {
+  display: block;
+  position: relative;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.control .control-mark:hover,
+.control .control-mark:hover {
+  opacity: 0.6;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="checkbox"]:focus-visible + .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
+.control:active .control-mark,
+.control:active .control-mark {
+  opacity: 0.3;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  background-image: url(../images/service-icons/tick.svg);
+  background-position: center;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.control-input[type="radio"]:focus-visible + .control-mark {
+  outline: 3px solid #83b3d3;
 }
 
 .price-filter {
@@ -817,18 +887,59 @@ input {
 }
 
 .wprapper-price .control-input {
-  text-align: start;
   box-sizing: border-box;
-  font-weight: 700;
-  line-height: 24px;
+  font-family: inherit;
+  font-size: 18px;
+  background: #f2f2f2;
+  border: 3px solid transparent;
   padding: 12px 20px;
   width: 143px;
-  color: #000000;
-  border: 0;
   height: 48px;
+  color: #000000;
 }
+
+.wprapper-price .control-input:hover {
+  background-color: #e6e6e6;
+}
+
+.wprapper-price .control-input:focus-visible {
+  outline: 3px solid #83b3d3;
+  background-color: #e6e6e6;
+}
+
 .min-price {
   margin-right: 2px;
+  border-radius: 4px 0 0 4px;
+}
+
+.max-price {
+  border-radius: 0 4px 4px 0;
+}
+
+.price-word {
+  position: absolute;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.3);
+  user-select: none;
+}
+
+.control .price-word {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+}
+
+.min-price::-webkit-outer-spin-button,
+.min-price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.max-price::-webkit-outer-spin-button,
+.max-price::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .button-search {
@@ -949,7 +1060,7 @@ input {
   grid-template-columns: repeat(2, 140px);
   gap: 16px 20px;
   grid-template-rows: 212px 1fr;
-  padding: 19px;
+  padding: 20px;
   border-radius: 4px;
   border: 1px solid #e6e6e6;
   box-sizing: border-box;
