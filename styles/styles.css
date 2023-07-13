@@ -188,14 +188,30 @@ body {
   padding: 8px 50px;
 }
 
-.reset {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+.cancel {
   color: #ffffff;
-  border: 0;
   background: transparent;
-  padding: 8px 50px;
+  border-radius: 4px;
+}
+
+.cancel.button:focus-visible {
+  border: 3px solid #83b3d3;
+  background: transparent;
+}
+
+.cancel.button:active {
+  color: rgba(255, 255, 255, 1);
+  background: transparent;
+}
+
+.cancel.button:hover {
+  opacity: 0.6;
+  background: transparent;
+}
+
+.cancel.button:focus {
+  opacity: 0.3;
+  background: transparent;
 }
 
 /* Шапка */
@@ -714,19 +730,11 @@ input {
   justify-content: center;
 }
 
-.catalog-filters {
+.catalog-filter {
   display: flex;
   width: 1060px;
   margin: 0;
-}
-
-.catalog-filter {
-  min-width: 151px;
-  margin: 0;
-  padding: 0;
-  margin-right: 70px;
-  min-height: 157px;
-  border: none;
+  align-items: center;
 }
 
 .catalog-filter-title {
@@ -785,6 +793,7 @@ input {
   flex-direction: column;
   justify-content: flex-end;
 }
+
 /* Сортировка */
 .wrapper-search {
   display: flex;
