@@ -40,7 +40,7 @@
           </ul>
           </nav>
   </header>
-  <main class="main-container">
+  <main class="main-container" data-test="main">
     <section class="filter-form">
   <header class="inner-header">
     <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -57,7 +57,7 @@
       </li>
     </ul>
   </header>
-    <div class="filter">
+    <div class="filter"  data-test="filter">
     <h2 class="visually-hidden" hidden>Список гостиниц с фильтрами</h2>
     <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
     <fieldset class="catalog-filter hotels-filter">
@@ -125,7 +125,7 @@
             </form>
           </section>
 <div class="wrapper-search">
-        <section class="result-search">
+        <section class="result-search" data-test="catalog">
   <h2 class="title">Найдено гостиниц: 38</h2>
     <select class="select-control" aria-label="Сортировка">
       <option value="cheap">Сначала дешевые</option>
@@ -133,7 +133,7 @@
       <option value="expensive">Сначала дорогие</option>
     </select>
       <ul class="show">
-      <li class="button-show">
+      <li class="button-show active">
     <a class="kard" href="#" >
       <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4 0H0V6H4V0Z" fill="black"/>
@@ -149,8 +149,15 @@
     <li class="button-show">
     <a class="slide" href="#" >
       <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_94248_243)">
         <path d="M16 12H0V14H16V12Z" fill="black"/>
         <path d="M14 2V8H2V2H14ZM16 0H0V10H16V0Z" fill="black"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_94248_243">
+        <rect width="16" height="14" fill="white"/>
+        </clipPath>
+        </defs>
         </svg>
       <span class="visually-hidden">Показать одну на странице</span>
     </a>
@@ -158,6 +165,7 @@
     <li class="button-show">
     <a class="list" href="#" >
       <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_94248_336)">
         <path d="M2 0H0V2H2V0Z" fill="black"/>
         <path d="M16 0H4V2H16V0Z" fill="black"/>
         <path d="M2 4H0V6H2V4Z" fill="black"/>
@@ -166,7 +174,14 @@
         <path d="M16 8H4V10H16V8Z" fill="black"/>
         <path d="M2 12H0V14H2V12Z" fill="black"/>
         <path d="M16 12H4V14H16V12Z" fill="black"/>
+        </g>
+        <defs>
+        <clipPath id="clip0_94248_336">
+        <rect width="16" height="14" fill="white"/>
+        </clipPath>
+        </defs>
         </svg>
+
       <span class="visually-hidden">Показать список</span>
     </a>
   </li>

@@ -834,29 +834,46 @@ input {
 
 .show {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  max-width: 160px;
+  width: 160px;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .button-show {
   display: flex;
-  width: 48px;
-  height: 18px;
   align-items: center;
   justify-content: center;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  padding: 17px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 1px 12px 9px 15px;
+  max-height: 48px;
 }
 
 .button-show:not(:last-child) {
   margin-right: 8px;
 }
 
+.active {
+  border: 2px solid #000;
+  border-radius: 4px;
+}
+
+.button-show:hover {
+  border: 2px solid #000;
+}
+.button-show:focus-visible {
+  outline: 2px solid #68a2ca;
+  outline-offset: -2px;
+}
 /* Гостиницы */
 
 .cards {
