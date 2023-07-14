@@ -57,28 +57,31 @@
       </li>
     </ul>
   </header>
-    <div class="filter"  data-test="filter">
+    <div class="filter" data-test="filter">
     <h2 class="visually-hidden" hidden>Список гостиниц с фильтрами</h2>
     <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
     <fieldset class="catalog-filter hotels-filter">
-      <legend class="catalog-filter-title">Инфраструктура</legend>
+      <legend class="catalog-filter-title">Инфраструктура:</legend>
       <ul class="catalog-filter-list">
         <li class="filter-item">
           <label class="control">
-            <input class="control-input" type="checkbox" name="pool" checked>
-        Бассейн
+            <input class="control-input visually-hidden" type="checkbox" name="pool" checked>
+            <span class="control-mark"></span>
+            <span class="control-label">Бассейн</span>
+          </label>
+          </li>
+        <li class="filter-item">
+          <label class="control">
+            <input class="control-input visually-hidden" type="checkbox" name="parking" checked>
+            <span class="control-mark"></span>
+            <span class="control-label">Парковка</span>
           </label>
         </li>
         <li class="filter-item">
           <label class="control">
-            <input class="control-input" type="checkbox" name="parking" checked>
-        Парковка
-          </label>
-        </li>
-        <li class="filter-item">
-          <label class="control">
-            <input class="control-input" type="checkbox" name="wifi">
-            Wi-Fi
+            <input class="control-input visually-hidden" type="checkbox" name="wifi">
+            <span class="control-mark"></span>
+            <span class="control-label">Wi-Fi</span>
           </label>
         </li>
       </ul>
@@ -88,34 +91,51 @@
             <ul class="catalog-filter-list">
               <li class="filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="type-house" value="Hotel" checked>
-                  Гостиница
+                  <input class="control-input visually-hidden" type="radio" name="type-house" value="hotel" checked>
+                  <span class="control-mark"></span>
+                <span class="control-label">Гостиница</span>
                 </label>
               </li>
               <li class="filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="type-house" value="Motel">
-                  Мотель
+                  <input class="control-input visually-hidden" type="radio" name="type-house" value="motel">
+                  <span class="control-mark"></span>
+                <span class="control-label">Мотель</span>
                 </label>
               </li>
               <li class="filter-item">
                 <label class="control">
-                  <input class="control-input" type="radio" name="type-house" value="Appart">
-                  Апартаменты
+                  <input class="control-input visually-hidden" type="radio" name="type-house" value="appart">
+                  <span class="control-mark"></span>
+                <span class="control-label">Апартаменты</span>
                 </label>
               </li>
             </ul>
             </fieldset>
+
               <fieldset class="catalog-filter price-filter">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                 <div class="wprapper-price">
-                <label for="min-price"><span class="visually-hidden" hidden>минимальная цена</span></label>
-                <input class="control-input min-price" type="text" placeholder="от" name="min-price" value="0">
-                  <label for="max-price"><span class="visually-hidden" hidden>максимальная цена</span></label>
-                <input class="control-input max-price" type="text" placeholder="до" name="max-price" value="9000">
+                  <label class="control">
+                  <span class="price-word">от</span>
+                <input class="control-input min-price" type="number" name="start-price" value="0">
+                </label>
+                <label class="control">
+                  <span class="price-word">до</span>
+                <input class="control-input max-price" type="number" name="end-price" value="9000">
+                </label>
                 </div>
-                <input class="slider" type="range" id="range-price" name="price" min="0" max="9000">
-                </fieldset>
+                <div class="slider">
+                <div class="range">
+                  <button class="range-toggle toggle-min">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                  </button>
+                  <button class="range-toggle toggle-max">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
+                </div>
+              </div>
+              </fieldset>
                 <div class="button-search">
                   <input class="button select" type="submit" value="ПРИМЕНИТЬ">
                 <input class="button cancel" type="reset" value="СБРОСИТЬ">
@@ -133,7 +153,7 @@
     </select>
       <ul class="show">
       <li class="button-show active">
-    <a class="kard" href="#" >
+    <a class="view" href="#" >
       <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4 0H0V6H4V0Z" fill="black"/>
         <path d="M16 0H12V6H16V0Z" fill="black"/>
@@ -146,7 +166,7 @@
     </a>
   </li>
     <li class="button-show">
-    <a class="slide" href="#" >
+    <a class="view" href="#" >
       <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_94248_243)">
         <path d="M16 12H0V14H16V12Z" fill="black"/>
@@ -162,7 +182,7 @@
     </a>
   </li>
     <li class="button-show">
-    <a class="list" href="#" >
+    <a class="view" href="#" >
       <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_94248_336)">
         <path d="M2 0H0V2H2V0Z" fill="black"/>
@@ -280,6 +300,7 @@
       <h2 class="title">Подпишитесь на рассылку</h2>
       <p class="description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+            <label class="visually-hidden" for="subscribe-email">Email</label>
           <input class="field-mail" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
           <button class="button select" type="submit">Подписаться</button>
         </form>
