@@ -130,6 +130,90 @@
         <button class="button select" type="submit">Подписаться</button>
       </form>
   </section>
+
+  <div class="modal-container modal-container-close">
+    <div class="modal modal-search">
+    <button class="close-button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+  <section class="modal-content">
+    <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
+    <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+
+  <div class="modal-form-date">
+      <span class="field-group">
+        <label class="modal-label" for="modal-date-start">
+          Дата заезда:</label>
+      <input class="field-modal" type="text" id="modal-date-start" name="modal-date-start" value="27 апреля 2020">
+    </span>
+      <p class="modal-info error">Мы не можем отправить вас в прошлое.</p>
+  </div>
+
+  <div class="modal-form-date end">
+  <p class="field-group">
+        <label class="modal-label" for="modal-date-end">
+          Дата выезда:</label>
+      <input class="field-modal" type="text" id="modal-date-end" name="modal-date-end" value="1 сентября 2023">
+    </p>
+      <p class="modal-info correct">На эти даты есть свободные номера. Пока есть.</p>
+    </div>
+
+      <div class="modal-guests">
+        <div class="amount-wrapper adult">
+      <label class="modal-label" for="adult">
+        Взрослые:</label>
+        <div class="amount-guests">
+          <button class="amount minus">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
+            </svg>
+            <span class="visually-hidden">Уменьшить количество.</span>
+          </button>
+        <input class="input-guests" id="adult" type="number" name="adult" value="2">
+        <button class="amount plus">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
+          </svg>
+          <span class="visually-hidden">Увеличить количество.</span>
+        </button>
+      </div>
+        </div>
+
+        <di class="amount-wrapper">
+          <label class="modal-label" for="kids">
+          Дети:</label>
+          <span class="tooltip">
+           <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+              <svg class="tooltip-info" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+              </svg>
+            </button>
+            <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+             </span>
+          <div class="amount-guests">
+            <button class="amount minus">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
+              </svg>
+              <span class="visually-hidden">Уменьшить количество.</span>
+            </button>
+          <input class="input-guests" id="kids" type="number" name="adult" value="2">
+          <button class="amount plus">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
+            </svg>
+            <span class="visually-hidden">Увеличить количество.</span>
+          </button>
+          </div>
+          </div>
+        <button class="button select" type="submit">Найти</button>
+      </div>
+  </form>
+  </section>
+  </div>
+  </div>
+
 </main>
 <footer>
   <div class="footer-container" data-test="footer">
@@ -183,71 +267,8 @@
   </svg>
     <span class="visually-hidden">Сайт создан htmlacademy</span>
     </a>
+    </div>
     </footer>
   </div>
-</div>
-<div class="modal-container modal-container-close">
-  <div class="modal modal-search">
-  <button class="close-button">
-    <span class="visually-hidden">Закрыть</span>
-  </button>
-  <section class="modal-content">
-    <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-
-    <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-<span class="modal-form-date">
-      <p class="field-group">
-        <label class="modal-label" for="modal-date-start">
-          Дата заезда:</label>
-      <input class="field-modal" type="text" id="modal-date-start" name="modal-date-start" value="27 апреля 2020">
-    </p>
-      <p class="modal-info error">Мы не можем отправить вас в прошлое.</p>
-</span>
-
-<span class="modal-form-date">
-  <p class="field-group">
-        <label class="modal-label" for="modal-date-end">
-          Дата выезда:</label>
-      <input class="field-modal" type="text" id="modal-date-end" name="modal-date-end" value="1 сентября 2023">
-    </p>
-      <p class="modal-info correct">На эти даты есть свободные номера. Пока есть.</p>
-    </span>
-
-      <p class="field-group modal-guests">
-      <label class="modal-label" for="adult">
-        Взрослые:</label>
-        <button class="button-modal minus" type="button">
-          <span class="visually-hidden">Уменьшить количество.</span>
-        </button>
-        <input class="control-input adult" id="adult" type="number" name="adult" value="2">
-        <button class="button-modal plus" type="button">
-          <span class="visually-hidden">Уменьшить количество.</span>
-        </button>
-      </p>
-
-      <p class="field-group modal-guests">
-        <label class="modal-label" for="kids">
-          Дети:</label>
-          <span class="tooltip">
-            <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-              <svg class="tooltip-info" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
-              </svg>
-            </button>
-            <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-          </span>
-          <button class="button-modal minus" type="button">
-            <span class="visually-hidden">Уменьшить количество.</span>
-          </button>
-          <input class="control-input kids" id="kids" type="number" name="kids" value="2">
-          <button class="button-modal plus" type="button">
-            <span class="visually-hidden">Уменьшить количество.</span>
-          </button>
-        </p>
-        <button class="button select" type="submit">Найти</button>
-</form>
-  </section>
-</div>
-</div>
     </body>
     </html>
