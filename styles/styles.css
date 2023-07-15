@@ -1170,26 +1170,6 @@ header {
   justify-self: end;
 }
 
-/* .cards::after {
-  display: block;
-  height: 1px;
-  width: 100%;
-  content: "";
-  margin: 0;
-  background-color: #e6e6e6;
-  margin-bottom: 40px;
-} */
-/* ДЛЯ ХЕДЕРА для черточки
-.pagination {
-  display: flex;
-  max-width: 1060px;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-  border-top: 1px solid #e6e6e6;
-  padding-top: 40px;
-  box-sizing: border-box;
-} */
 /* Пагинация */
 
 .pagination {
@@ -1385,10 +1365,10 @@ header {
 
 .modal-guests {
   display: flex;
-  justify-content: flex-start;
-  max-width: 557px;
+  flex-wrap: wrap;
   gap: 88px;
-  
+  margin-bottom: 24px;
+}
 
 .amount-wrapper {
   display: flex;
@@ -1442,6 +1422,29 @@ gap: 46px;
   cursor: pointer;
   padding: 14px 10px;
 }
+
+.modal-button.select {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: PT Sans;
+font-size: 20px;
+font-style: normal;
+line-height: 24px;
+  font-weight: 700;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 18px 77px;
+  border: 0;
+  margin: 0;
+  border-radius: 10px;
+}
+
 
 /* .minus:hover path {
   fill: #000;
@@ -1498,9 +1501,9 @@ gap: 46px;
 
 .tooltip-text {
   position: absolute;
-  display: none;
   padding: 19px 18px 22px 22px;
-  top: 15px;
+  box-sizing: border-box;
+  top: 40px;
   left: -56px;
   width: 256px;
   font-size: 16px;
@@ -1509,7 +1512,7 @@ gap: 46px;
   border-radius: 10px;
   background-color: #333;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
+  display: none;
 }
 
 
