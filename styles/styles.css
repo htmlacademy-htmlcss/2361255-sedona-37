@@ -1380,10 +1380,9 @@ header {
 }
 
 .amount-wrapper.adult {
-width: 247px;
-gap: 46px;
+  width: 247px;
+  gap: 46px;
 }
-
 
 .amount-guests {
   display: flex;
@@ -1430,9 +1429,9 @@ gap: 46px;
   justify-content: center;
   box-sizing: border-box;
   font-family: PT Sans;
-font-size: 20px;
-font-style: normal;
-line-height: 24px;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 24px;
   font-weight: 700;
   align-items: center;
   text-align: center;
@@ -1444,7 +1443,6 @@ line-height: 24px;
   margin: 0;
   border-radius: 10px;
 }
-
 
 /* .minus:hover path {
   fill: #000;
@@ -1514,7 +1512,6 @@ line-height: 24px;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   display: none;
 }
-
 
 .tooltip-toggle:hover + .tooltip-text,
 .tooltip-toggle:focus + .tooltip-text {
