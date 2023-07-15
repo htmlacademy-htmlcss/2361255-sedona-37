@@ -126,10 +126,19 @@
     <p class="description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-email">Email</label>
-        <input class="field-mail" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
+        <input class="field-mail" placeholder="Ваш e-mail" type="email" name="subscribe-email">
         <button class="button select" type="submit">Подписаться</button>
       </form>
   </section>
+
+  <section class="subscribe" data-test="subscribe">
+    <h2 class="title">Подпишитесь на рассылку</h2>
+    <p class="description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="field-mail" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
+        <button class="button select" type="submit">Подписаться</button>
+      </form>
+</section>
 
   <div class="modal-container modal-container-close">
     <div class="modal modal-search">
@@ -149,7 +158,6 @@
     </span>
       <p class="modal-info error">Мы не можем отправить вас в прошлое.</p>
   </div>
-
   <div class="modal-form-date end">
   <p class="field-group">
         <label class="modal-label" for="modal-date-end">
@@ -180,17 +188,17 @@
       </div>
         </div>
 
-        <di class="amount-wrapper">
+        <div class="amount-wrapper">
           <label class="modal-label" for="kids">
           Дети:</label>
           <span class="tooltip">
-           <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+          <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
               <svg class="tooltip-info" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
               </svg>
             </button>
             <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-             </span>
+            </span>
           <div class="amount-guests">
             <button class="amount minus">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -205,15 +213,15 @@
             </svg>
             <span class="visually-hidden">Увеличить количество.</span>
           </button>
-          </div>
-          </div>
-        <button class="button select" type="submit">Найти</button>
-      </div>
-  </form>
-  </section>
-  </div>
-  </div>
+        </div>
+              </div>
+              </div>
+              <button class="button select" type="submit">Найти</button>
 
+</form>
+</section>
+</div>
+</div>
 </main>
 <footer>
   <div class="footer-container" data-test="footer">
