@@ -42,7 +42,7 @@ body {
 
 .main-container {
   margin: 0;
-  flex-grow: 1;description
+  flex-grow: 1;
 }
 
 .page-container {
@@ -103,11 +103,11 @@ body {
 }
 
 .button:focus {
-  background: rgba (255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .button:disabled {
-  background: rgba (229, 229, 229, 1);
+  background-color: rgba(229, 229, 229, 1);
   pointer-events: none;
 }
 
@@ -220,7 +220,6 @@ body {
   padding: 8px 50px;
 }
 
-.
 /* Шапка */
 .page-header {
   display: flex;
@@ -453,8 +452,7 @@ header {
   padding: 0;
   font-weight: 400;
   font-size: 22px;
-  }
-
+}
 
 .dark-background p {
   color: #ffffff;
@@ -755,7 +753,7 @@ header {
   display: block;
   width: 8px;
   height: 21px;
-  background-image: url("../images/service-icons/afurther.svg");
+  background-image: url("../images/service-icons/further.svg");
   background-repeat: no-repeat;
   position: relative;
   left: 10px;
@@ -906,7 +904,7 @@ header {
 
 .wprapper-price .control-input:hover {
   background-color: #e6e6e6;
-  outline: none
+  outline: none;
 }
 
 .wprapper-price .control-input:focus-visible {
@@ -1075,23 +1073,21 @@ header {
   display: flex;
   padding: 14px 13px 16px 15px;
   align-items: center;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
   box-sizing: border-box;
-  }
+}
 
 .active .view {
   border: 2px solid #000;
-
 }
-
 
 .view:hover {
   border: 2px solid #000;
 }
 
 .view:focus-visible {
-  outline: 2px solid #68A2CA;
+  outline: 2px solid #68a2ca;
   outline-offset: -2px;
 }
 
@@ -1283,15 +1279,21 @@ header {
   width: 100%;
   height: 100%;
   background: rgba(242, 242, 242, 0.8);
-  display: none;
 }
+
+/* .modal-container-close {
+  display: none;
+} */
 
 .modal {
   position: relative;
   margin: auto;
   padding: 64px 70px;
   background-color: #ffffff;
-  width: 448px;
+  width: 577px;
+  border-radius: 30px;
+  color: #000;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
 
 .modal-title {
@@ -1300,7 +1302,7 @@ header {
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
-  color: rgba (0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
   margin: 0;
   padding: 0;
   margin-bottom: 64px;
@@ -1308,21 +1310,56 @@ header {
 
 .close-button {
   position: absolute;
-  padding: 0;
-  top: 0;
-  right: 0;
-  width: 56px;
-  height: 44px;
-  background-color: #ffffff;
+  top: 62px;
+  right: 52px;
+  height: 52px;
+  width: 52px;
+  background-color: #f2f2f2;
   border: none;
-  background-image: url("../images/service-icons/close.svg");
+  background-image: url("../images/modal/close.svg");
   background-repeat: no-repeat;
-  background-position: center right 10px;
+  background-position: center center;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-.field {
-  background-image: url("../images/service-icons/calendar.svg");
+.modal-label {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.field-modal {
+  display: flex;
+  box-sizing: border-box;
+  color: #000;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  border: 0;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  padding: 12px 20px;
+  min-height: 39px;
+  width: 440px;
+  background-image: url("../images/modal/calendar.svg");
   background-repeat: no-repeat;
   background-position: center right 20px;
+}
+
+.modal-form-date {
+  display: flex;
+}
+
+.field-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }

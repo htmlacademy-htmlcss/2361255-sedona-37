@@ -126,7 +126,7 @@
     <p class="description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-email">Email</label>
-        <input class="field-mail" placeholder="Ваш e-mail" type="email" name="subscribe-email">
+        <input class="field-mail" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
         <button class="button select" type="submit">Подписаться</button>
       </form>
   </section>
@@ -183,47 +183,72 @@
   </svg>
     <span class="visually-hidden">Сайт создан htmlacademy</span>
     </a>
-        </div>
-        <div class="modal-container">
-          <div class="modal modal-search">
-          <button class="close-button">
-            <span class="visually-hidden">Закрыть</span>
-          </button>
-          <section class="modal-content">
-            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-            <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-
-              <p class="field-group modal-form-date">
-                <label class="modal-label" for="modal-date-start">
-                  Дата заезда:</label>
-              <input class="field" type="text" id="modal-date-start" name="modal-date-start" placeholder="27 апреля 2020">
-            </p>
-              <p class="modal-info">Мы не можем отправить вас в прошлое.</p>
-
-              <p class="field-group modal-form-date">
-                <label class="modal-label" for="modal-date-end">
-                  Дата выезда:</label>
-              <input class="field" type="text" id="modal-date-end" name="modal-date-end" placeholder="1 сентября 2023">
-            </p>
-              <p class="modal-info">На эти даты есть свободные номера. Пока есть.</p>
-
-              <p class="field-group modal-guests">
-              <label class="modal-label" for="adult">
-                Взрослые:</label>
-                <input class="control-input adult" id="adult" type="number" name="adult" value="2">
-              </p>
-              <p class="field-group modal-guests">
-                <label class="modal-label" for="kids">
-                  Дети:</label>
-                  <input class="control-input kids" id="kids" type="number" name="kids" value="2">
-                </p>
-                <button class="button select" type="submit">Найти</button>
-      </form>
-            </form>
-          </section>
-        </div>
-        </div>
     </footer>
   </div>
+</div>
+<div class="modal-container modal-container-close">
+  <div class="modal modal-search">
+  <button class="close-button">
+    <span class="visually-hidden">Закрыть</span>
+  </button>
+  <section class="modal-content">
+    <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
+    <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+
+      <p class="field-group modal-form-date">
+        <label class="modal-label" for="modal-date-start">
+          Дата заезда:</label>
+      <input class="field-modal" type="text" id="modal-date-start" name="modal-date-start" value="27 апреля 2020">
+    </p>
+
+      <p class="modal-info error">Мы не можем отправить вас в прошлое.</p>
+</span>
+
+<span class="modal-date-wrapper">
+  <p class="field-group modal-form-date">
+        <label class="modal-label" for="modal-date-end">
+          Дата выезда:</label>
+      <input class="field-modal" type="text" id="modal-date-end" name="modal-date-end" value="1 сентября 2023">
+    </p>
+      <p class="modal-info correct">На эти даты есть свободные номера. Пока есть.</p>
+    </span>
+
+      <p class="field-group modal-guests">
+      <label class="modal-label" for="adult">
+        Взрослые:</label>
+        <button class="button-modal minus" type="button">
+          <span class="visually-hidden">Уменьшить количество.</span>
+        </button>
+        <input class="control-input adult" id="adult" type="number" name="adult" value="2">
+        <button class="button-modal plus" type="button">
+          <span class="visually-hidden">Уменьшить количество.</span>
+        </button>
+      </p>
+
+      <p class="field-group modal-guests">
+        <label class="modal-label" for="kids">
+          Дети:</label>
+          <span class="tooltip">
+            <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+              <svg class="tooltip-info" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+              </svg>
+            </button>
+            <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+          </span>
+          <button class="button-modal minus" type="button">
+            <span class="visually-hidden">Уменьшить количество.</span>
+          </button>
+          <input class="control-input kids" id="kids" type="number" name="kids" value="2">
+          <button class="button-modal plus" type="button">
+            <span class="visually-hidden">Уменьшить количество.</span>
+          </button>
+        </p>
+        <button class="button select" type="submit">Найти</button>
+</form>
+  </section>
+</div>
+</div>
     </body>
     </html>
