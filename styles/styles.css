@@ -300,6 +300,10 @@ body {
   background-size: 18px 18px;
   position: relative;
 }
+
+.nav-user.search:hover {
+  scale: 1.1;
+}
 .nav-user.favorites {
   margin-right: 21px;
   background-image: url(../images/header/heart.svg);
@@ -307,6 +311,10 @@ body {
   position: relative;
   background-position: center;
   background-size: 20px 20px;
+}
+
+.nav-user.favorites:hover {
+  scale: 1.1;
 }
 
 .nav-user.favorites::before {
@@ -755,10 +763,15 @@ header {
   list-style: none;
 }
 
+.breadcrumbs-link:active,
+.breadcrumbs-link:hover,
+.breadcrumbs-link:focus-visible {
+  opacity: 0.3;
+}
+
 .breadcrumbs-item {
   display: flex;
   align-items: center;
-  font-size: 16px;
 }
 
 .breadcrumbs-item:not(:last-child) {
@@ -768,6 +781,15 @@ header {
 .breadcrumbs-link {
   display: flex;
   box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+.icon {
   width: 13px;
   height: 15px;
   align-items: center;
@@ -925,7 +947,6 @@ header {
 .wprapper-price {
   display: flex;
   margin-bottom: 44px;
-  /* justify-content: flex-end; */
 }
 
 .wprapper-price .control-input {
@@ -948,8 +969,8 @@ header {
 }
 
 .wprapper-price .control-input:focus-visible {
-  outline: none;
-  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+  background-color: rgba(230, 230, 230, 1);
 }
 
 .min-price {
@@ -1038,16 +1059,6 @@ input[type="number"]:focus {
   outline: 3px solid #83b3d3;
 }
 
-/* .button-search {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0;
-  height: 160px;
-  gap: 34px;
-  box-sizing: border-box;
-} */
-
 .button-search {
   display: flex;
   flex-wrap: wrap;
@@ -1106,6 +1117,10 @@ input[type="number"]:focus {
   appearance: none;
 }
 
+.select-control:hover,
+.select-control:focus-visible {
+  outline: 2px solid #68a2ca;
+}
 .show {
   display: flex;
   flex-wrap: wrap;
@@ -1178,6 +1193,11 @@ input[type="number"]:focus {
   object-fit: contain;
   grid-column: 1/-1;
   background-color: #756157;
+}
+
+.card-image:hover,
+.card-image:focus-visible {
+  opacity: 0.8;
 }
 
 .card .title-item {
