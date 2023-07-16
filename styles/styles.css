@@ -88,10 +88,11 @@ body {
 .button:hover,
 .button:focus-visible {
   background-color: rgba(97, 80, 72, 1);
+  outline: none;
 }
 
 .button:focus {
-  background-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button:disabled {
@@ -134,16 +135,18 @@ body {
 
 .select.button:hover,
 .select.button:focus-visible {
-  outline: none;
   background-color: #68a2ca;
+  outline: none;
 }
-.select.button:active {
-  background-color: #82b3d3;
-  color: rgba(255, 255, 255, 0.3);
-}
+
 .select.button:disabled {
   background-color: #e5e5e5;
   pointer-events: none;
+}
+
+.select.button:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .selected {
@@ -230,6 +233,10 @@ body {
   margin-bottom: -12px;
 }
 
+.navigation-logo:hover {
+  scale: 1.05;
+}
+
 .nav-list {
   display: flex;
   flex-wrap: wrap;
@@ -252,6 +259,10 @@ body {
   padding: 20px 16px;
   margin: 0;
   box-sizing: border-box;
+}
+
+.navigation-link:hover {
+  color: #756157;
 }
 
 .nav-item-current {
@@ -568,21 +579,6 @@ header {
   margin-bottom: 20px;
 }
 
-.field-mail {
-  font-size: 18px;
-  box-sizing: border-box;
-  line-height: 24px;
-  min-height: 52px;
-  width: 452px;
-  font-family: "PT Sans", sans-serif;
-  border: 0;
-  padding: 13px 0 11px 17px;
-  background-color: #f2f2f2;
-  border-radius: 4px 0 0 4px;
-  color: rgba(0, 0, 0, 0.6);
-  border: 3px solid transparent;
-}
-
 .subscribe-email {
   flex-grow: 1;
   margin: 0;
@@ -594,13 +590,43 @@ header {
   justify-content: center;
 }
 
-.field-mail:hover,
+.field-mail {
+  font-size: 18px;
+  box-sizing: border-box;
+  line-height: 24px;
+  min-height: 52px;
+  width: 452px;
+  font-family: "PT Sans", sans-serif;
+  padding: 13px 0 11px 17px;
+  border-radius: 4px 0 0 4px;
+  color: rgba(0, 0, 0, 1);
+  border: 3px solid transparent;
+  background-color: #f2f2f2;
+  font-weight: 400;
+}
+
+.field-mail ::placeholder {
+  opacity: 0.6;
+  font-weight: 700;
+}
+
+.field-mail:hover {
+  border: 3px solid #83b3d3;
+  background: #e6e6e6;
+}
 .field-mail:active,
 .field-mail:focus-visible {
   border-radius: 4px 0 0 4px;
-  outline: none;
+  outline: 2px solid #83b3d3;
+  outline-offset: -2px;
+  background: #e6e6e6;
 }
 
+.field-mail:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
 /* Подвал */
 
 .footer-container {
@@ -625,8 +651,13 @@ header {
   box-sizing: border-box;
 }
 
+.address-phone:focus {
+  color: rgba(117, 97, 87, 1);
+}
+
 .address-phone:hover,
 .address-phone:focus-visible {
+  outline: none;
   color: #756157;
 }
 .address-phone:active {
@@ -646,8 +677,10 @@ header {
 
 .about-text:hover path,
 .about-text:focus-visible path {
-  fill: #756157;
+  fill: rgba(117, 97, 87, 1);
+  outline: none;
 }
+
 .about-text:active path {
   fill: rgba(117, 97, 87, 0.3);
 }
@@ -673,6 +706,11 @@ header {
   align-items: center;
   justify-content: center;
   padding: 0 10px;
+}
+
+.social-button:focus,
+.social-button:focus-visible {
+  outline: none;
 }
 
 .social-button:hover path,
