@@ -55,18 +55,6 @@ body {
   background: #ffffff;
 }
 
-.navigation-user,
-.advantages-service,
-.advantages-list,
-.breadcrumbs,
-.catalog-filter-list,
-.cards,
-.pagination,
-.list-social,
-.nav-list {
-  list-style: none;
-}
-
 .text {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -250,6 +238,7 @@ body {
   margin: 0;
   padding: 0;
   align-items: center;
+  list-style: none;
 }
 
 .navigation-link {
@@ -282,6 +271,7 @@ body {
   margin: 0;
   margin-left: auto;
   padding: 0;
+  list-style: none;
 }
 
 .nav-user {
@@ -293,7 +283,7 @@ body {
 }
 
 .nav-user.search {
-  background-image: url(../images/search.svg);
+  background-image: url(../images/header/search.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px 18px;
@@ -301,7 +291,7 @@ body {
 }
 .nav-user.favorites {
   margin-right: 21px;
-  background-image: url(../images/heart.svg);
+  background-image: url(../images/header/heart.svg);
   background-repeat: no-repeat;
   position: relative;
   background-position: center;
@@ -411,6 +401,7 @@ header {
   padding: 0;
   text-align: center;
   margin: 0;
+  list-style: none;
 }
 
 .dark-background {
@@ -489,6 +480,7 @@ header {
   padding: 0;
   text-align: center;
   margin: 0 auto;
+  list-style: none;
 }
 
 .service-container {
@@ -670,14 +662,17 @@ header {
   margin-right: 42px;
   justify-content: center;
   align-items: center;
+  list-style: none;
 }
 
-.item-social {
+.social-button {
   display: flex;
+  box-sizing: border-box;
   width: 47px;
   height: 40px;
   align-items: center;
   justify-content: center;
+  padding: 0 10px;
 }
 
 .social-button:hover path,
@@ -719,6 +714,7 @@ header {
   margin: 0;
   padding: 0;
   margin-bottom: 37px;
+  list-style: none;
 }
 
 .breadcrumbs-item {
@@ -794,6 +790,7 @@ header {
   margin: 0;
   padding: 0;
   line-height: 23px;
+  list-style: none;
 }
 
 .control-label {
@@ -935,16 +932,19 @@ header {
   right: 20px;
 }
 
-.min-price::-webkit-outer-spin-button,
-.min-price::-webkit-inner-spin-button {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.max-price::-webkit-outer-spin-button,
-.max-price::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
 }
 
 .slider {
@@ -1103,6 +1103,7 @@ header {
   padding-bottom: 38px;
   box-sizing: border-box;
   border-bottom: 1px solid #e6e6e6;
+  list-style: none;
 }
 
 .card {
@@ -1179,6 +1180,7 @@ header {
   padding: 0;
   flex-wrap: wrap;
   box-sizing: border-box;
+  list-style: none;
 }
 
 .pagination-item {
@@ -1261,9 +1263,9 @@ header {
   background: rgba(242, 242, 242, 0.8);
 }
 
-/* .modal-container-close {
+.modal-container-close {
   display: none;
-} */
+}
 
 .modal {
   position: relative;
@@ -1398,20 +1400,14 @@ header {
   height: 48px;
   box-sizing: border-box;
   padding: 14px 10px;
+  font-family: PT Sans;
   justify-content: center;
   align-items: center;
   background: #f2f2f2;
   border: none;
   font-size: 18px;
-  font-style: normal;
   font-weight: 700;
   line-height: 20px;
-}
-
-.input-guests::-webkit-outer-spin-button,
-.input-guests::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
 .amount {
@@ -1444,7 +1440,7 @@ header {
   border-radius: 10px;
 }
 
-/* .minus:hover path {
+.minus:hover path {
   fill: #000;
   fill-opacity: 1;
 }
@@ -1455,7 +1451,6 @@ header {
 .minus:active path {
   fill-opacity: 0.2;
 }
-} */
 
 .tooltip {
   position: absolute;
@@ -1486,7 +1481,7 @@ header {
   cursor: pointer;
 }
 
-.tooltip-text::before {
+.tooltip-popup::before {
   position: absolute;
   content: "";
   top: -5px;
@@ -1497,7 +1492,7 @@ header {
   background-color: #333;
 }
 
-.tooltip-text {
+.tooltip-popup {
   position: absolute;
   padding: 19px 18px 22px 22px;
   box-sizing: border-box;
@@ -1513,8 +1508,8 @@ header {
   display: none;
 }
 
-.tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus + .tooltip-text {
+.tooltip-toggle:hover + .tooltip-popup,
+.tooltip-toggle:focus + .tooltip-popup {
   display: block;
   padding: 17px 16px;
 }
