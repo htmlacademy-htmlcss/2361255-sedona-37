@@ -40,6 +40,10 @@ body {
   height: 100%;
 }
 
+img {
+  max-width: 100%;
+}
+
 .main-container {
   margin: 0;
   flex-grow: 1;
@@ -62,7 +66,10 @@ body {
   color: #333333;
   margin: 0;
   font-weight: 400;
+  display: block;
+  min-width: 232px;
 }
+
 /* Кнопки-ссылки */
 
 .button {
@@ -277,6 +284,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   min-width: 268px;
+  max-width: 368px;
   justify-content: flex-end;
   align-items: center;
   margin: 0;
@@ -465,11 +473,11 @@ header {
 
 .image-advantages {
   background-image: url(../images/advantages/street.jpg);
-  background-size: cover;
   background-repeat: no-repeat;
   width: 800px;
-  background-position: bottom;
+  background-position: center;
   margin: 0;
+  object-fit: contain;
 }
 
 .medium-background {
@@ -504,8 +512,10 @@ header {
 
 .image-bridge {
   background-image: url(../images/advantages/bridge.jpg);
-  background-size: cover;
+  background-repeat: no-repeat;
   width: 800px;
+  margin: 0;
+  object-fit: contain;
 }
 
 .intro-service {
@@ -588,13 +598,13 @@ header {
   display: block;
   text-align: center;
   margin: 0;
-  padding: 96px 258px 103px;
+  padding: 96px 258px 104px;
 }
 
 .subscribe.main {
   background-image: url("../images/subscribe.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  object-fit: contain;
   background-color: #c7b39b;
   color: #ffffff;
 }
@@ -602,6 +612,7 @@ header {
   display: flex;
   margin: auto;
   box-sizing: border-box;
+  min-height: 52px;
 }
 .title.invert {
   color: #ffffff;
@@ -609,7 +620,7 @@ header {
 }
 
 .subscribe .title {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .subscribe-email {
@@ -627,7 +638,6 @@ header {
   font-size: 18px;
   box-sizing: border-box;
   line-height: 24px;
-  min-height: 52px;
   width: 452px;
   font-family: "PT Sans", sans-serif;
   padding: 13px 0 11px 17px;
@@ -668,54 +678,6 @@ header {
   padding: 40px 70px 30px;
   align-items: center;
 }
-.address-phone {
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 40px;
-  line-height: 40px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #000000;
-  min-width: 331px;
-  margin: 0;
-  justify-content: center;
-  padding: 5px 195px;
-  box-sizing: border-box;
-}
-
-.address-phone:focus {
-  color: rgba(117, 97, 87, 1);
-}
-
-.address-phone:hover,
-.address-phone:focus-visible {
-  outline: none;
-  color: #756157;
-}
-.address-phone:active {
-  color: rgba(117, 97, 87, 0.3);
-}
-
-.about-text {
-  display: flex;
-  box-sizing: border-box;
-  margin: 0;
-  justify-content: center;
-  margin-left: auto;
-  min-width: 115px;
-  align-items: center;
-  padding: 8px 0;
-}
-
-.about-text:hover path,
-.about-text:focus-visible path {
-  fill: rgba(117, 97, 87, 1);
-  outline: none;
-}
-
-.about-text:active path {
-  fill: rgba(117, 97, 87, 0.3);
-}
 
 /* Соц.сети */
 .list-social {
@@ -723,7 +685,7 @@ header {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  min-width: 142px;
+  width: 142px;
   margin-right: 42px;
   justify-content: center;
   align-items: center;
@@ -752,6 +714,67 @@ header {
 
 .social-button:active path {
   opacity: 0.3;
+}
+
+.address-phone {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  max-width: 333px;
+  margin: 0;
+  justify-content: center;
+  padding: 5px 195px;
+  font-weight: 400;
+}
+
+.address-phone:focus {
+  color: rgba(117, 97, 87, 1);
+}
+
+.address-phone:hover,
+.address-phone:focus-visible {
+  outline: none;
+  color: #756157;
+}
+.address-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.wpapper-about-text {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 0;
+  justify-content: center;
+  margin-left: auto;
+  max-width: 115px;
+  align-items: center;
+  padding: 8px 0;
+}
+
+/* .about-text {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+  justify-content: center;
+  margin-left: auto;
+  min-width: 115px;
+  align-items: center;
+  padding: 8px 0;
+} */
+
+.about-text:hover path,
+.about-text:focus-visible path {
+  fill: rgba(117, 97, 87, 1);
+  outline: none;
+}
+
+.about-text:active path {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* Фильтр */
@@ -847,8 +870,8 @@ header {
 .catalog-filters {
   display: flex;
   width: 1060px;
+  flex-wrap: wrap;
   margin: 0;
-  /* align-items: center; */
 }
 
 .catalog-filter {
@@ -1434,6 +1457,7 @@ input[type="number"]:focus {
   font-weight: 700;
   line-height: 24px;
   text-transform: capitalize;
+  max-width: 119px;
 }
 
 .field-modal {
@@ -1511,7 +1535,6 @@ input[type="number"]:focus {
 
 .modal-guests {
   display: flex;
-  flex-wrap: wrap;
   gap: 88px;
   margin-bottom: 24px;
 }
@@ -1522,12 +1545,15 @@ input[type="number"]:focus {
   justify-content: space-between;
   padding: 0;
   margin: 0;
-  gap: 82px;
 }
 
 .amount-wrapper.adult {
   width: 247px;
   gap: 46px;
+}
+
+.amount-wrapper.kids {
+  width: 242px;
 }
 
 .amount-guests {
