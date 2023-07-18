@@ -370,32 +370,6 @@ header {
   padding: 0 123px;
 }
 
-/* .intro {
-  display: block;
-  margin: auto;
-  padding: 69px 274px;
-  margin-bottom: 21px;
-}
-
-.intro .title {
-  margin-bottom: 25px;
-} */
-
-/* advantages */
-
-/* .advantages-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 181px;
-  width: 230px;
-  margin: 0;
-  padding: 102px 85px;
-  margin-top: auto;
-  margin-bottom: auto;
-  justify-content: center;
-  align-items: center;
-} */
-
 .advantages-container {
   display: flex;
   flex-direction: column;
@@ -608,6 +582,7 @@ header {
   background-color: #c7b39b;
   color: #ffffff;
 }
+
 .subscribe-form {
   display: flex;
   margin: auto;
@@ -756,17 +731,6 @@ header {
   padding: 8px 0;
 }
 
-/* .about-text {
-  display: flex;
-  box-sizing: border-box;
-  margin: 0;
-  justify-content: center;
-  margin-left: auto;
-  min-width: 115px;
-  align-items: center;
-  padding: 8px 0;
-} */
-
 .about-text:hover path,
 .about-text:focus-visible path {
   fill: rgba(117, 97, 87, 1);
@@ -781,7 +745,7 @@ header {
 
 .filter-form {
   background-image: url("../images/filtr-background.jpg");
-  background-size: cover;
+  object-fit: contain;
   background-repeat: no-repeat;
   background-color: #756157;
   color: #ffffff;
@@ -789,7 +753,7 @@ header {
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  padding: 35px 70px 65px 70px;
+  padding: 35px 70px 70px 70px;
 }
 
 .inner-header-title {
@@ -806,7 +770,7 @@ header {
   align-items: center;
   margin: 0;
   padding: 0;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
   list-style: none;
 }
 
@@ -869,17 +833,16 @@ header {
 /* Фильтр */
 .catalog-filters {
   display: flex;
-  width: 1060px;
   flex-wrap: wrap;
-  margin: 0;
-}
+  margin: 0 auto;
+  gap: 79px;
+  }
 
 .catalog-filter {
   display: flex;
   margin: 0;
   padding: 0;
-  /* min-width: 150px; */
-  min-height: 157px;
+  height: 157px;
   border: none;
   margin-right: 70px;
 }
@@ -892,7 +855,7 @@ header {
   text-transform: capitalize;
   margin: 0;
   padding: 0;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
 }
 
 .catalog-filter-list {
@@ -902,22 +865,28 @@ header {
   list-style: none;
 }
 
-.control-label {
-  padding-left: 36px;
-}
-
-.house-filter {
-  margin-right: 152px;
-}
-
 .filter-item {
   line-height: 23px;
+  margin: 0:
 }
-
 .filter-item:not(:last-child) {
   margin-bottom: 15px;
 }
 
+.control-label {
+  padding-left: 36px;
+}
+
+.wrapper-house {
+  display: flex;
+}
+/* .house-filter {
+  margin-right: 150px;
+} */
+
+.purchase {
+  display: flex;
+}
 .control {
   display: block;
   position: relative;
@@ -988,6 +957,7 @@ header {
   display: block;
   margin: 0;
   margin-right: 70px;
+  height: 160px;
   width: 288px;
 }
 
@@ -1108,13 +1078,9 @@ input[type="number"]:focus {
 
 .button-search {
   display: flex;
-  flex-wrap: wrap;
-  align-self: flex-start;
   flex-direction: column;
-  padding: 0;
-  padding-top: 57px;
-  gap: 33px;
-  box-sizing: border-box;
+  justify-content: flex-end;
+  gap: 32px;
 }
 
 /* Сортировка */
@@ -1130,6 +1096,7 @@ input[type="number"]:focus {
 .result-search {
   display: flex;
   align-items: center;
+  width: 1060px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -1139,21 +1106,25 @@ input[type="number"]:focus {
 }
 
 .result-search .title {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
-  margin-right: 200px;
+  margin-right: 185px;
   text-transform: uppercase;
-  max-width: 353px;
+  font-weight: 700;
+  width: 353px;
 }
 
 .select-control {
   display: flex;
   width: 292px;
-  margin-right: 70px;
+  margin-right: 69px;
   min-height: 49px;
   padding: 5px 15px 5px 20px;
   box-sizing: border-box;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  background-color: inherit;
   background-image: url(../images/service-icons/arrow.svg);
   background-repeat: no-repeat;
   background-position: center right 17px;
@@ -1167,6 +1138,7 @@ input[type="number"]:focus {
 .select-control:hover,
 .select-control:focus-visible {
   outline: 2px solid #68a2ca;
+  outline-offset: -2px;
 }
 .show {
   display: flex;
@@ -1281,13 +1253,13 @@ input[type="number"]:focus {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: 9px 22px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   background-color: #f2f2f2;
   border-radius: 4px;
   justify-content: center;
+  font-weight: 400;
 }
 
 .card-price {
@@ -1415,12 +1387,12 @@ input[type="number"]:focus {
   color: rgba(0, 0, 0, 1);
   margin: 0;
   padding: 0;
-  margin-bottom: 64px;
+  margin-bottom: 63px;
 }
 
 .close-button {
   position: absolute;
-  top: 63px;
+  top: 65px;
   right: 52px;
   height: 52px;
   width: 52px;
@@ -1464,7 +1436,7 @@ input[type="number"]:focus {
   display: flex;
   box-sizing: border-box;
   color: #000;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -1477,6 +1449,7 @@ input[type="number"]:focus {
   background-image: url("../images/modal/calendar.svg");
   background-repeat: no-repeat;
   background-position: center right 23px;
+  margin-bottom: 3px;
 }
 
 .field-modal:hover {
@@ -1516,13 +1489,14 @@ input[type="number"]:focus {
 }
 
 .modal-info {
+  display: block;
   margin: 0;
   margin-left: 137px;
-  margin-top: 3px;
   font-size: 16px;
   line-height: 21px;
   color: #333333;
   padding: 0 20px;
+  margin-bottom: 1px;
 }
 
 .error {
@@ -1536,7 +1510,7 @@ input[type="number"]:focus {
 .modal-guests {
   display: flex;
   gap: 88px;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .amount-wrapper {
@@ -1570,7 +1544,7 @@ input[type="number"]:focus {
   height: 48px;
   box-sizing: border-box;
   padding: 14px 10px;
-  font-family: PT Sans;
+  font-family: "PT Sans", sans-serif;
   justify-content: center;
   align-items: center;
   background: #f2f2f2;
@@ -1587,22 +1561,43 @@ input[type="number"]:focus {
   cursor: pointer;
   width: 40px;
   height: 48px;
+  outline: none;
 }
-.amount:hover path {
+
+.amount:hover path,
+.amount:focus path {
   fill: #000;
   fill-opacity: 1;
 }
-.amount:focus {
-  fill: #000;
-  fill-opacity: 1;
-}
+
 .amount:focus-visible {
   border: 3px solid #82b3d3;
   border-radius: 4px;
-  outline: none;
 }
 .amount:active {
   opacity: 0.2;
+}
+
+.modal-button.select {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 24px;
+  font-weight: 700;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 18px 77px;
+  border: 0;
+  margin: 0;
+  border-radius: 10px;
 }
 
 .tooltip {
@@ -1665,26 +1660,4 @@ input[type="number"]:focus {
 .tooltip-toggle:focus + .tooltip-popup {
   display: block;
   padding: 17px 16px;
-}
-
-.modal-button.select {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-  box-sizing: border-box;
-  font-family: PT Sans;
-  font-size: 20px;
-  font-style: normal;
-  line-height: 24px;
-  font-weight: 700;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 18px 77px;
-  border: 0;
-  margin: 0;
-  border-radius: 10px;
 }
