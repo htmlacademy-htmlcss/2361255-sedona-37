@@ -2,10 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="favicon.ico">
-  </head>
+    </head>
   <body>
     <div class="page-container">
       <header class="page-header" data-test="header">
@@ -58,7 +58,8 @@
         </li>
     </ol>
       </header>
-    <section class="filter" data-test="filter">
+      <div data-test="filter">
+    <section class="filter">
     <h2 class="visually-hidden" hidden>Фильтры для выбора гостиницы.</h2>
     <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
     <fieldset class="catalog-filter hotels-filter">
@@ -143,6 +144,7 @@
               </div>
             </form>
 </section>
+</div>
           </section>
 <div class="wrapper-search" data-test="catalog">
         <section class="result-search">

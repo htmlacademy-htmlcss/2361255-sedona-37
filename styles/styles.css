@@ -552,10 +552,11 @@ header {
 
 /* Поиск отелей */
 .search-hotels {
-  display: block;
+  display: flex;
   min-height: 214px;
   margin: 0 auto;
   padding: 96px 304px;
+  flex-direction: column;
 }
 
 .search-hotels p {
@@ -752,7 +753,7 @@ header {
   padding: 0;
   border: 0;
   box-sizing: border-box;
-  padding: 35px 70px 65px 70px;
+  padding: 35px 70px 65px 69px;
 }
 
 .inner-header-title {
@@ -832,7 +833,7 @@ header {
 /* Фильтр */
 .catalog-filters {
   display: flex;
-  width: 1060px;
+  /* width: 1060px; */
   flex-wrap: wrap;
   margin: 0;
 }
@@ -841,9 +842,10 @@ header {
   display: flex;
   margin: 0;
   padding: 0;
+  padding-left: 1px;
   min-height: 157px;
   border: none;
-  margin-right: 70px;
+  margin-right: 68px;
 }
 
 .catalog-filter-title {
@@ -858,6 +860,7 @@ header {
 }
 
 .catalog-filter-list {
+  display: block;
   margin: 0;
   padding: 0;
   line-height: 23px;
@@ -869,7 +872,7 @@ header {
 }
 
 .house-filter {
-  margin-right: 152px;
+  margin-right: 150px;
 }
 
 .filter-item {
@@ -949,7 +952,7 @@ header {
 .price-filter {
   display: block;
   margin: 0;
-  margin-right: 70px;
+  margin-right: 68px;
   width: 288px;
 }
 
@@ -1102,10 +1105,13 @@ input[type="number"]:focus {
 }
 
 .result-search .title {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
-  margin-right: 200px;
+  margin-right: 185px;
   text-transform: uppercase;
-  max-width: 353px;
+  font-weight: 700;
+  width: 353px;
 }
 
 .select-control {
@@ -1117,6 +1123,7 @@ input[type="number"]:focus {
   box-sizing: border-box;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  background-color: inherit;
   background-image: url(../images/service-icons/arrow.svg);
   background-repeat: no-repeat;
   background-position: center right 17px;
@@ -1245,13 +1252,13 @@ input[type="number"]:focus {
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  padding: 9px 22px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   background-color: #f2f2f2;
   border-radius: 4px;
   justify-content: center;
+  font-weight: 400;
 }
 
 .card-price {
