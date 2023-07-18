@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-  </head>
+    </head>
   <body>
     <div class="page-container">
       <header class="page-header" data-test="header">
@@ -132,8 +132,8 @@
 </section>
 
   <div class="modal-container">
-    <div class="modal modal-search">
-    <button class="close-button">
+    <div class="modal modal-search" data-test="modal">
+    <button class="close-button" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
   <section class="modal-content">
@@ -158,10 +158,38 @@
       <p class="modal-info correct">На эти даты есть свободные номера. Пока есть.</p>
     </div>
 
-      <div class="modal-guests">
-        <div class="amount-wrapper adult">
-      <label class="modal-label" for="adult">
-        Взрослые:</label>
+    <div class="modal-guests">
+      <div class="amount-wrapper adult">
+    <label class="modal-label" for="adult">
+      Взрослые:</label>
+      <div class="amount-guests">
+        <button class="amount minus">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
+          </svg>
+          <span class="visually-hidden">Уменьшить количество.</span>
+        </button>
+      <input class="input-guests" id="adult" type="number" name="adult" value="2">
+      <button class="amount plus">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
+        </svg>
+        <span class="visually-hidden">Увеличить количество.</span>
+      </button>
+    </div>
+      </div>
+
+      <div class="amount-wrapper kids">
+        <label class="modal-label" for="kids">
+        Дети:</label>
+        <span class="tooltip">
+        <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+            <svg class="tooltip-info" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
+            </svg>
+          </button>
+          <span class="tooltip-popup" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+          </span>
         <div class="amount-guests">
           <button class="amount minus">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,7 +197,7 @@
             </svg>
             <span class="visually-hidden">Уменьшить количество.</span>
           </button>
-        <input class="input-guests" id="adult" type="number" name="adult" value="2">
+        <input class="input-guests" id="kids" type="number" name="adult" value="2">
         <button class="amount plus">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
@@ -177,38 +205,9 @@
           <span class="visually-hidden">Увеличить количество.</span>
         </button>
       </div>
-        </div>
-
-        <div class="amount-wrapper kids">
-          <label class="modal-label" for="kids">
-          Дети:</label>
-          <span class="tooltip">
-          <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
-              <svg class="tooltip-info" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z" fill="white"/>
-              </svg>
-            </button>
-            <span class="tooltip-popup" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-            </span>
-          <div class="amount-guests">
-            <button class="amount minus">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/>
-              </svg>
-              <span class="visually-hidden">Уменьшить количество.</span>
-            </button>
-          <input class="input-guests" id="kids" type="number" name="adult" value="2">
-          <button class="amount plus">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/>
-            </svg>
-            <span class="visually-hidden">Увеличить количество.</span>
-          </button>
-        </div>
-              </div>
-              </div>
-              <button class="modal-button select" type="submit">Найти</button>
-
+            </div>
+            </div>
+            <button class="modal-button select" type="submit">Найти</button>
 </form>
 </section>
 </div>

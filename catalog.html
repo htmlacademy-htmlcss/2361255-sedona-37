@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
     <title>Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
-  </head>
+    </head>
   <body>
     <div class="page-container">
       <header class="page-header" data-test="header">
@@ -44,9 +44,9 @@
     <section class="filter-form">
   <header class="inner-header">
     <h1 class="inner-header-title">Гостиницы Седоны</h1>
-    <ul class="breadcrumbs">
+    <ol class="breadcrumbs">
       <li class="breadcrumbs-item">
-        <a class="breadcrumbs-link icon" href="index.html">
+        <a class="breadcrumbs-link icon-breadcrumbs" href="index.html">
           <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.5 0.5L0.5 6.30006V12.5001H12.5V6.30006L6.5 0.5ZM11.5 11.5001H1.5V6.70005L6.5 1.9L11.5 6.70005V11.5001Z" fill="white"/>
             <path d="M4.5 10.5001H5.5V8.00005H7.5V10.5001H8.5V7.00005H4.5V10.5001Z" fill="white"/>
@@ -56,11 +56,13 @@
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">Гостиницы</a>
         </li>
-    </ul>
+    </ol>
       </header>
-    <div class="filter" data-test="filter">
-    <h2 class="visually-hidden" hidden>Список гостиниц с фильтрами</h2>
+      <div data-test="filter">
+    <section class="filtr">
+    <h2 class="visually-hidden" hidden>Фильтры для выбора гостиницы.</h2>
     <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
+      <div class="wrapper-house">
     <fieldset class="catalog-filter hotels-filter">
       <legend class="catalog-filter-title">Инфраструктура:</legend>
       <ul class="catalog-filter-list">
@@ -113,7 +115,9 @@
               </li>
             </ul>
             </fieldset>
+</div>
 
+<div class="purchase">
               <fieldset class="catalog-filter price-filter">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
                 <div class="wprapper-price">
@@ -141,11 +145,13 @@
                   <button class="button select" type="submit">ПРИМЕНИТЬ</button>
                 <button class="button cancel" type="reset">СБРОСИТЬ</button>
               </div>
+              </div>
             </form>
+</section>
 </div>
           </section>
-<div class="wrapper-search">
-        <section class="result-search" data-test="catalog">
+<div class="wrapper-search" data-test="catalog">
+        <section class="result-search">
   <h2 class="title">Найдено гостиниц: 38</h2>
     <select class="select-control" aria-label="Сортировка">
       <option value="cheap">Сначала дешевые</option>
@@ -297,14 +303,14 @@
       </li>
       </ul>
     </div>
-    <section class="subscribe" data-test="subscribe">
+    <div class="subscribe" data-test="subscribe">
       <h2 class="title">Подпишитесь на рассылку</h2>
       <p class="description">Только полезная информация и никакого спама, <br>честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="field-mail" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
           <button class="button select" type="submit">Подписаться</button>
         </form>
-</section>
+</div>
 
 </main>
 <footer>
