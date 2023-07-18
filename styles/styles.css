@@ -800,7 +800,7 @@ header {
   color: rgba(255, 255, 255, 1);
 }
 
-.icon {
+.icon-breadcrumbs {
   width: 13px;
   height: 15px;
   align-items: center;
@@ -835,7 +835,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  gap: 79px;
+  gap: 140px;
 }
 
 .catalog-filter {
@@ -882,10 +882,6 @@ header {
   display: flex;
   max-width: 371px;
 }
-
-/* .house-filter {
-  margin-right: 150px;
-} */
 
 .purchase {
   display: flex;
