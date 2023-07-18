@@ -370,32 +370,6 @@ header {
   padding: 0 123px;
 }
 
-/* .intro {
-  display: block;
-  margin: auto;
-  padding: 69px 274px;
-  margin-bottom: 21px;
-}
-
-.intro .title {
-  margin-bottom: 25px;
-} */
-
-/* advantages */
-
-/* .advantages-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 181px;
-  width: 230px;
-  margin: 0;
-  padding: 102px 85px;
-  margin-top: auto;
-  margin-bottom: auto;
-  justify-content: center;
-  align-items: center;
-} */
-
 .advantages-container {
   display: flex;
   flex-direction: column;
@@ -582,7 +556,6 @@ header {
   min-height: 214px;
   margin: 0 auto;
   padding: 96px 304px;
-  /* flex-direction: column; */
 }
 
 .search-hotels p {
@@ -757,17 +730,6 @@ header {
   padding: 8px 0;
 }
 
-/* .about-text {
-  display: flex;
-  box-sizing: border-box;
-  margin: 0;
-  justify-content: center;
-  margin-left: auto;
-  min-width: 115px;
-  align-items: center;
-  padding: 8px 0;
-} */
-
 .about-text:hover path,
 .about-text:focus-visible path {
   fill: rgba(117, 97, 87, 1);
@@ -879,7 +841,6 @@ header {
   display: flex;
   margin: 0;
   padding: 0;
-  /* min-width: 150px; */
   min-height: 157px;
   border: none;
   margin-right: 70px;
