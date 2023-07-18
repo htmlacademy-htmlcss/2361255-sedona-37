@@ -836,7 +836,7 @@ header {
   flex-wrap: wrap;
   margin: 0 auto;
   gap: 79px;
-  }
+}
 
 .catalog-filter {
   display: flex;
@@ -867,8 +867,9 @@ header {
 
 .filter-item {
   line-height: 23px;
-  margin: 0:
+  margin: 0;
 }
+
 .filter-item:not(:last-child) {
   margin-bottom: 15px;
 }
@@ -879,13 +880,16 @@ header {
 
 .wrapper-house {
   display: flex;
+  max-width: 371px;
 }
+
 /* .house-filter {
   margin-right: 150px;
 } */
 
 .purchase {
   display: flex;
+  max-width: 288px;
 }
 .control {
   display: block;
