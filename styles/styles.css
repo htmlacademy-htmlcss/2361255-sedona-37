@@ -230,6 +230,7 @@ img {
   padding-left: 70px;
   padding-right: 70px;
   width: 1060px;
+  z-index: 1;
 }
 
 .navigation-logo {
@@ -355,10 +356,6 @@ img {
   right: 3px;
   color: #ffffff;
   padding: 5px;
-}
-
-header {
-  z-index: 1;
 }
 
 /* Hero */
